@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'PCParts.apps.TodolistConfig',
     'rest_framework',
     'PCParts',
     'django.contrib.admin',
