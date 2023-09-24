@@ -24,5 +24,9 @@ class PCParts(models.Model):
     blank=False
   )
 
+
+  def __str__(self):
+    return 'ID: ' + str(self.id) + ' ' + self.text
+
   class Meta:
     db_table = 'PCParts'
