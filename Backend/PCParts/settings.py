@@ -78,7 +78,11 @@ WSGI_APPLICATION = 'PCParts.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'PCParts',
+        'USER': 'root',
+        'PASSWORD': 'erk6142001',
+        'HOST': 'localhost',
+        'PORT': 3306,
     }
 }
 
