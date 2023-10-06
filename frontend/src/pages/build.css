@@ -1,0 +1,21 @@
+#build-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#categories-bar {
+    width: 25%;
+}
+
+#main-content {
+    width: 75%;
+}
+
+#search-filter {
+    width: 100%;
+}
+
+#components-list {
+    width: 100%;
+}
