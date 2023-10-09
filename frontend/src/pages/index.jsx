@@ -9,7 +9,6 @@ const Index = () => {
     return (
         <>
             <Nav/>
-            <Button/>
             <h1>Title</h1>
             <p>What is PC Build Buddy</p>
             <Button/>

@@ -4,7 +4,7 @@ const Button = () => {
 
     return (
         <button className="button">
-            Get Started
+            <p>Get Started</p>
         </button>
     );
 }
