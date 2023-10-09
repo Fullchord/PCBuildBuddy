@@ -1,8 +1,8 @@
 import "./build.css";
 
-import Categories from "../components/Categories/Categories";
-import SearchFilter from "../components/SearchFilter/SearchFilter";
-import Components from "../components/Components/Components";
+import Categories from "../components/Categories";
+import SearchFilter from "../components/SearchFilter";
+import Components from "../components/Components";
 
 const Build = () => {
 

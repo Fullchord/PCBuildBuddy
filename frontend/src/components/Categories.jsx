@@ -1,9 +1,17 @@
 import "./Categories.css";
 
 const Categories = () => {
-    return(
+    return (
         <div id="categories-content">
             Categories
+        </div>
+    );
+}
+
+const Category = () => {
+    return (
+        <div className="category-content">
+            Category
         </div>
     );
 }
