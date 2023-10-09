@@ -1,0 +1,30 @@
+.footer {
+    font-size: 1.5em;
+    text-align: center;
+    align-content: center;
+    background-color: #112D32;
+    color: #77C;
+}
+
+.table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+}
+
+.td {
+    padding-left: 10%;
+    padding-right: 0%;
+}
+
+.tr {
+    border-bottom: solid .05em  #77C
+}
+
+.p {
+    font-size: .5em;
+    text-align: center;
+    background-color: #222;
+    color: #888;
+}
