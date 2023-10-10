@@ -9,9 +9,9 @@ const Index = () => {
     return (
         <>
             <Nav/>
-            <h1>Title</h1>
-            <p>What is PC Build Buddy</p>
-            <Button/>
+            <h1 className="textHome">Title</h1>
+            <p className="textHome">What is PC Build Buddy</p>
+            <div className="centButton"><Button/></div>
         </>
     );
 }

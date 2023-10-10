@@ -1,0 +1,12 @@
+.centButton {
+    align-content: center;
+    justify-content: center;
+    width: 9rem;
+    margin-inline: auto;
+    padding-bottom: 2%;
+}
+
+.textHome {
+    text-align: center;
+    padding: 2% 2% 2% 2%;
+}
