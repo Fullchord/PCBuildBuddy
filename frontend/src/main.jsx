@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './global.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from "./store";
 
 import HomePage from "./pages/index";
 import BuildPage from "./pages/build";
@@ -22,10 +24,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Header/>
-    <main>
-      <RouterProvider router={router}/>
-    </main>
-    <Footer/>
+    <Provider store={store}>
+      <Header/>
+      <main>
+        <RouterProvider router={router}/>
+      </main>
+      <Footer/>
+      </Provider>
   </React.StrictMode>,
 )
