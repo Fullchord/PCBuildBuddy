@@ -6,7 +6,18 @@
     padding-bottom: 2%;
 }
 
-.textHome {
+#index-content {
+    width: 75%;
+    margin-inline: auto;
     text-align: center;
-    padding: 2% 2% 2% 2%;
+}
+
+.index-content-cards {
+    width: auto;
+    display: flex;
+}
+
+.index-content-cards-card {
+    display: block;
+    width: 50%;
 }

@@ -1,0 +1,16 @@
+
+.content-card {
+
+    border: 2px solid black;
+
+    margin-block: 0.5rem;
+    margin-inline: 0.5rem;
+    padding-inline: 0.5rem;
+    padding-block: 0.75rem;
+
+    text-align: center;
+}
+
+.content-card h2 {
+    font-size: 2rem;
+}
