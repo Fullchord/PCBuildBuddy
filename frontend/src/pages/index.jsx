@@ -15,8 +15,8 @@ const Index = () => {
                     <h1>Here is your PC Build Buddy!</h1>
                     <div className="index-content-cards">
                         <div className="index-content-cards-card">
+                            <h2>Who are we?</h2>
                             <ContentCard>
-                                <h2>Who are we?</h2>
                                 <p>
                                     Started in our senior year of college, PC Build Buddy was mean't from the start
                                     to help people. As computer science students, we loved building and assembling
@@ -26,8 +26,8 @@ const Index = () => {
                             </ContentCard>
                         </div>
                         <div className="index-content-cards-card">
+                            <h2>What do we do?</h2>
                             <ContentCard>
-                                <h2>What do we do?</h2>
                                 <p>
                                     To put it simply, we help people build the computer that suites them. Custom 
                                     PCs are great to get the best performance for your needs at the lowest price.
