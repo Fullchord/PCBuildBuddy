@@ -2,8 +2,8 @@
     font-size: 1.5em;
     text-align: center;
     align-content: center;
-    background-color: #112D32;
-    color: #77C;
+    background-color: var(--primary-dark);
+    color: var(--primary-color);
     width: 100%;
 }
 
@@ -20,12 +20,12 @@
 }
 
 .tr {
-    border-bottom: solid .05em  #77C
+    border-bottom: solid .05em var(--primary-color);
 }
 
 .p {
     font-size: .5em;
     text-align: center;
-    background-color: #222;
-    color: #888;
+    background-color: var(--neutral-dark);
+    color: var(--neutral-light);
 }
