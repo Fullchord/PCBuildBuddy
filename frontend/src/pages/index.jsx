@@ -80,7 +80,7 @@ const Index = () => {
                 </div>
                 <div id="index-content-item">
                     <h1>Lets Get Started!</h1>
-                    <div><Button/></div>
+                    <div><Button>Get Started!</Button></div>
                 </div>
             </div>
         </>
