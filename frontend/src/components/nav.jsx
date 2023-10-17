@@ -1,12 +1,12 @@
 import "./nav.css";
-import Button from "./button.jsx"
+import AnchorButton from "./AnchorButton";
 
 const Nav = () => {
 
     return (
         <nav className="nav">
             <h1 className="title">PC Build Buddy</h1>
-            <Button className="test">Start Building!</Button>
+            <AnchorButton to="/build" className="test">Start Building!</AnchorButton>
         </nav>
     );
 }
