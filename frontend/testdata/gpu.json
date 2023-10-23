@@ -1,0 +1,2 @@
+[{"ID":1, "Name":"RTX 3060", "Price":289.99, "TDP":200, "Manufacturer":"MSI", "CoreClock":1710.0, "MemoryType":"DDR6", "MemorySize":12, "Description":""},
+ {"ID":2, "Name":"RX 6600", "Price":219.99, "TDP":200, "Manufacturer":"XFX", "CoreClock":2044.0, "MemoryType":"DDR6", "MemorySize":8, "Description":""}]
