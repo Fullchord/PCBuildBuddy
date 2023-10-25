@@ -1,35 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './global.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from "./store";
-
-import HomePage from "./pages/index";
-import BuildPage from "./pages/build";
+import { router } from './router';
 
 import Header from "./components/header";
 import Footer from "./components/footer";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomePage/>
-  },
-  {
-    path: "/build",
-    element: <BuildPage/>
-  },
-]);
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <Header/>
-      <main>
-        <RouterProvider router={router}/>
-      </main>
-      <Footer/>
-      </Provider>
+      <RouterProvider router={router}/>
+    </Provider>
   </React.StrictMode>,
 )

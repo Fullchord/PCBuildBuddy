@@ -4,11 +4,12 @@ import "../components/nav";
 import Nav from "../components/nav.jsx";
 import ContentCard from "../components/ContentCard";
 import AnchorButton from "../components/AnchorButton";
+import Footer from "../components/footer";
 
 const Index = () => {
 
     return (
-        <>
+        <main>
             <Nav/>
             <div id="index-content">
                 <div className="index-content-item">
@@ -83,7 +84,8 @@ const Index = () => {
                     <div><AnchorButton to="/build">Get Started!</AnchorButton></div>
                 </div>
             </div>
-        </>
+            <Footer/>
+        </main>
     );
 }
 

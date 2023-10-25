@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    background-color: var(--primary-dark);
+    padding: 1% 1% 1% 10%;
+}
+
+.title {
+    font-size: 2em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-shadow: var(--primary-dark) .05em .05em;
+    text-align: left;
+    padding-right: 20%;
+    padding-top: 1%;
+
+    width: 100%;
+    flex-grow: 2;
+}

@@ -29,3 +29,13 @@
     background-color: var(--neutral-dark);
     color: var(--neutral-light);
 }
+
+.footer-link {
+    margin-inline: 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-link:hover {
+    font-weight: bold;
+}

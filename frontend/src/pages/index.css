@@ -1,11 +1,3 @@
-.centButton {
-    align-content: center;
-    justify-content: center;
-    width: 9rem;
-    margin-inline: auto;
-    padding-bottom: 2%;
-}
-
 #index-content {
     width: 75%;
     margin-inline: auto;
