@@ -7,7 +7,6 @@ const AnchorButton = ({to, children}) => {
     const navigate = useNavigate();
 
     const onClick = () => {
-        console.log("here");
         navigate(to);
     }
 

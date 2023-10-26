@@ -1,0 +1,28 @@
+[
+    {
+        "type": "CPU",
+        "filterParams": [{
+                "name": "Clock Speed",
+                "type": "number",
+                "min": 1,
+                "max": 6
+            },
+            {
+                "name": "Manufacturer (Select)",
+                "type": "select",
+                "values": [
+                    "AMD",
+                    "Intel"
+                ]
+            },
+            {
+                "name": "Manufacturer (Radio)",
+                "type": "radio",
+                "values": [
+                    "AMD",
+                    "Intel"
+                ]
+            }
+        ]
+    }
+]
