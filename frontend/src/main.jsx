@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './global.css'
-import '../public/styles.css'
 import { RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from "./store";

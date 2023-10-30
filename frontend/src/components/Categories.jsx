@@ -24,7 +24,7 @@ const CPUCategory = () => {
         <div id="category-content">
             <div id="center">
                <BsFillCpuFill size={'auto'}/>
-                <p class="text-center">CPU</p> 
+                <p className="text-center">CPU</p> 
             </div>
         </div>
     );
@@ -35,7 +35,7 @@ const CoolerCategory = () => {
         <div id="category-content">
             <div id="center">
                <BsFan size={'auto'}/>
-                <p class="text-center">Cooler</p> 
+                <p className="text-center">Cooler</p> 
             </div>
         </div>
     );
@@ -46,7 +46,7 @@ const MotherboardCategory = () => {
         <div id="category-content">
             <div id="center">
                <BsMotherboardFill size={'auto'}/>
-                <p class="text-center">Motherboard</p> 
+                <p className="text-center">Motherboard</p> 
             </div>
         </div>
     );
@@ -58,7 +58,7 @@ const MemoryCategory = () => {
         <div id="category-content">
             <div id="center">
                <BsMemory size={'auto'}/>
-                <p class="text-center">Memory</p> 
+                <p className="text-center">Memory</p> 
             </div>
         </div>
     );
@@ -70,7 +70,7 @@ const StorageCategory = () => {
         <div id="category-content">
             <div id="center">
                <BsFillDeviceHddFill size={'auto'}/>
-                <p class="text-center">Storage</p> 
+                <p className="text-center">Storage</p> 
             </div>
         </div>
     );
@@ -81,7 +81,7 @@ const GPUCategory = () => {
         <div id="category-content">
             <div id="center">
                <BsGpuCard size={'auto'}/>
-                <p class="text-center">GPU</p> 
+                <p className="text-center">GPU</p> 
             </div>
         </div>
     );
@@ -92,7 +92,7 @@ const TowerCategory = () => {
         <div id="category-content">
             <div id="center">
                <PiComputerTowerFill size={'auto'}/>
-                <p class="text-center">Tower</p> 
+                <p className="text-center">Tower</p> 
             </div>
         </div>
     );
@@ -103,7 +103,7 @@ const PSUCategory = () => {
         <div id="category-content">
             <div id="center">
                <FaPlug size={'auto'}/>
-                <p class="text-center">PSU</p> 
+                <p className="text-center">PSU</p> 
             </div>
         </div>
     );
