@@ -16,8 +16,25 @@
    background-color: var(--primary-dark);
 }
 
-#searchfilter-content h2 {
+#searchfilter-header {
+   display: flex;
+   flex-direction: row;
+
+   width: 100%;
+}
+
+#searchfilter-header h2 {
    color: white;
+}
+
+#searchfilter-expand {
+   color: white;
+   float: right;
+
+   height: 2rem;
+   width: 1rem;
+   
+   margin-inline: 0.5rem;
 }
 
 #filter-content, #search-content {

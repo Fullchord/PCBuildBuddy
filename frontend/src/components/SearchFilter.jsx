@@ -3,13 +3,25 @@ import "./SearchFilter.css";
 import { useForm } from "react-hook-form";
 import { ComponentType } from "../../util/ComponentType";
 import TemplatedFilter from "./TemplatedFilter";
+import ExpandArrow from "./ExpandArrow";
+import { useState } from "react";
 
 const SearchFilter = () => {
+    const [isExpand, setIsExpand] = useState(false);
+
+    const onExpand =  (expand) => {
+        setIsExpand(!expand);
+    }    
+
     return (
         <div id="searchfilter-content">
-            <h2>Search/Filter</h2>
-            <Search/>
-            <Filter/>
+            <span id="searchfilter-header">
+                <h2>Search/Filter</h2>
+                <div id="searchfilter-expand">
+                    <ExpandArrow onExpand={onExpand} isExpanded={isExpand}/>
+                </div>
+            </span>
+            { isExpand ? <><Search/> <Filter/></> : <></>}
         </div>
     );
 }
