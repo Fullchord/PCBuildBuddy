@@ -8,19 +8,129 @@
                 "max": 6
             },
             {
-                "name": "Manufacturer (Select)",
+                "name": "Manufacturer 0 (Select)",
                 "type": "select",
                 "values": [
+                    null,
                     "AMD",
                     "Intel"
                 ]
             },
             {
-                "name": "Manufacturer (Radio)",
+                "name": "Manufacturer 1 (Radio)",
                 "type": "radio",
                 "values": [
                     "AMD",
                     "Intel"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "COOLER",
+        "filterParams": [
+            {
+                "name": "Manufacturer",
+                "type": "select",
+                "values": [
+                    "Cooler Master",
+                    "AMD",
+                    "Noctua"
+                ]
+            },
+            {
+                "name": "Noise-Level",
+                "type": "select",
+                "values": [
+                    "Quite",
+                    "Normal",
+                    "Loud"
+                ]
+            },
+            {
+                "name": "Water-Cooled",
+                "type": "checkbox"
+            },
+            {
+                "name": "Fanless",
+                "type": "checkbox"
+            }
+        ]
+    }, 
+    {
+        "type": "TOWER",
+        "filterParams": [
+            {
+                "name": "Manufacturer",
+                "type": "select",
+                "values": [
+                    "Cooler Master",
+                    "Power PC",
+                    "ABS",
+                    "Noctua"
+                ]
+            },
+            {
+                "name": "Test (Extra information)",
+                "type": "numeric-range",
+                "min": 0,
+                "max": 100
+            }
+        ]
+    },
+    {
+        "type": "GPU",
+        "filterParams": [
+            {
+                "name": "Manufacturer",
+                "type": "select",
+                "values": [
+                    "Nvidia",
+                    "AMD",
+                    "Intel"
+                ]
+            },
+            {
+                "name": "Clock Speed",
+                "type": "number"
+            },
+            {
+                "name": "Memory Size",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "type": "MEMORY",
+        "filterParams": [
+            {
+                "name": "Manufacturer",
+                "type": "select",
+                "values": [
+                    "Corsair",
+                    "G Skill",
+                    "OLOy",
+                    "Crucial"
+                ]
+            },
+            {
+                "name": "Size (GB)",
+                "type": "numeric-range",
+                "min": 1,
+                "max": 1024
+            },
+            {
+                "name": "Sticks",
+                "type": "numeric-range",
+                "min": 1,
+                "max": 8
+            },
+            {
+                "name": "Speed (Mhz)",
+                "type": "select",
+                "values": [
+                    1000, 3200, 3600,
+                    3800, 4200, 4600
                 ]
             }
         ]

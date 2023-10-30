@@ -63,7 +63,7 @@
    margin-right: 0.25rem;
 }
 
-#filter-content > span > label {
+#filter-content > span > label:first-child {
    font-weight: 700;
 }
 
