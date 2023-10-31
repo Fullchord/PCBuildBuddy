@@ -33,5 +33,24 @@ export const ComponentType = Object.freeze({
             default:
                 return ComponentType.UNDEFINED;
         }
+    },
+
+    getStringRep(c) {
+        if (c == undefined) return undefined;
+
+        const stringTable = [
+            [ComponentType.CPU, "CPU"],
+            [ComponentType.COOLER, "COOLER"],
+            [ComponentType.MEMORY, "MEMORY"],
+            [ComponentType.TOWER, "TOWER"], 
+            [ComponentType.GPU, "GPU"],
+            [ComponentType.MOTHERBOARD, "MOTHERBOARD"],
+            [ComponentType.PSU, "PSU"],
+            [ComponentType.STORAGE, "STORAGE"],
+            [ComponentType.UNDEFINED, undefined]
+        ];
+
+        return stringTable.find((ste) => ste[0] == c)[1];
     }
 });
+
