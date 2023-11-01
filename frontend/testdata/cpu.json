@@ -1,2 +1,2 @@
-[{"ID":1, "Name":"13700K", "Price":464.23, "Speed":5.4, "CoreCount":16, "ThreadCount":24, "TDP":253, "DDR_ID":1, "Socket_ID":1, "Description":""},
- {"ID":2, "Name":"7600X", "Price":249.0, "Speed":4.7, "CoreCount":6, "ThreadCount":12, "TDP":105, "DDR_ID":2, "Socket_ID":2, "Description":""}]
+[{"ID":1, "type":"CPU", "Name":"13700K", "Price":464.23, "Speed":5.4, "CoreCount":16, "ThreadCount":24, "TDP":253, "DDR_ID":1, "Socket_ID":1, "Description":""},
+ {"ID":2, "type":"CPU", "Name":"7600X", "Price":249.0, "Speed":4.7, "CoreCount":6, "ThreadCount":12, "TDP":105, "DDR_ID":2, "Socket_ID":2, "Description":""}]

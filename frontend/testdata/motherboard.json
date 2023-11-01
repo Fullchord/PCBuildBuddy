@@ -1,2 +1,2 @@
-[{"ID":1, "Name":"Z790-P", "Price":189.99, "TDP":60, "Manufacturer":"MSI", "RamSlots":4, "M.2Slot":1, "DDR_ID":1, "MemorySpeed_ID":1, "FormFactor_ID":1, "Description":""},
- {"ID":2, "Name":"B650M-P", "Price":119.99, "TDP":60, "Manufacturer":"MSI", "RamSlots":4, "M.2Slot":1, "DDR_ID":2, "MemorySpeed_ID":2, "FormFactor_ID":1, "Description":""}]
+[{"ID":1, "type":"MOTHERBOARD", "Name":"Z790-P", "Price":189.99, "TDP":60, "Manufacturer":"MSI", "RamSlots":4, "M.2Slot":1, "DDR_ID":1, "MemorySpeed_ID":1, "FormFactor_ID":1, "Description":""},
+ {"ID":2, "type":"MOTHERBOARD", "Name":"B650M-P", "Price":119.99, "TDP":60, "Manufacturer":"MSI", "RamSlots":4, "M.2Slot":1, "DDR_ID":2, "MemorySpeed_ID":2, "FormFactor_ID":1, "Description":""}]

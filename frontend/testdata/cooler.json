@@ -1,2 +1,2 @@
-[{"ID":1, "Name":"Wraith", "Price":8.49, "TDP":2, "Manufacturer":"AMD", "NoiseLevel":42, "WaterCooled":0, "Fanless":0, "Description":"", "Socket_ID":2},
- {"ID":2, "Name":"Frezzer II 240", "Price":89.81, "TDP":5, "Manufacturer":"ARCTIC", "NoiseLevel":60, "WaterCooled":1, "Fanless":0, "Description":"", "Socket_ID":1}]
+[{"ID":1, "type":"COOLER", "Name":"Wraith", "Price":8.49, "TDP":2, "Manufacturer":"AMD", "NoiseLevel":42, "WaterCooled":0, "Fanless":0, "Description":"", "Socket_ID":2},
+ {"ID":2, "type":"COOLER", "Name":"Frezzer II 240", "Price":89.81, "TDP":5, "Manufacturer":"ARCTIC", "NoiseLevel":60, "WaterCooled":1, "Fanless":0, "Description":"", "Socket_ID":1}]
