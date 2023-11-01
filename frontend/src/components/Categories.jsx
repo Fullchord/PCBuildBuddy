@@ -1,113 +1,65 @@
 import "./Categories.css";
-import { BsFillCpuFill, BsFan, BsMotherboardFill, BsMemory, BsFillDeviceHddFill, BsGpuCard } from 'react-icons/bs';
+import { BsFillCpuFill, BsFan, BsMotherboardFill, BsMemory, BsFillDeviceHddFill, BsGpuCard, BsCpuFill, Bs0Circle } from 'react-icons/bs';
 import { PiComputerTowerFill } from 'react-icons/pi';
 import { FaPlug } from 'react-icons/fa6';
+import { ComponentType } from "../../util/ComponentType";
 
 const Categories = () => {
+    
+    const categories = [
+        ComponentType.CPU,
+        ComponentType.COOLER,
+        ComponentType.MOTHERBOARD,
+        ComponentType.MEMORY,
+        ComponentType.STORAGE,
+        ComponentType.GPU,
+        ComponentType.TOWER,
+        ComponentType.PSU,
+    ];
+
     return (
         <div id="categories-content">
-            <CPUCategory/>
-            <CoolerCategory/>
-            <MotherboardCategory/>
-            <MemoryCategory/>
-            <StorageCategory/>
-            <GPUCategory/>
-            <TowerCategory/>
-            <PSUCategory/>
-            
+            {categories.map((type) => {
+                return (
+                    <Category categoryType={type}/>
+                );
+            })}       
         </div>
     );
 }
 
-const CPUCategory = () => {
+const Category = ({categoryType}) => {
+    const categoryString = ComponentType.getStringRep(categoryType); 
     return (
-        <div id="category-content">
-            <div id="center">
-               <BsFillCpuFill size={'auto'}/>
-                <p className="text-center">CPU</p> 
-            </div>
+        <div className="category-content" key={categoryString}>
+            {getIconForType(categoryType)}
+            <div className="category-content-title">{categoryString}</div>
         </div>
     );
 }
 
-const CoolerCategory = () => {
-    return (
-        <div id="category-content">
-            <div id="center">
-               <BsFan size={'auto'}/>
-                <p className="text-center">Cooler</p> 
-            </div>
-        </div>
-    );
+function getIconForType(componentType) {
+    switch(componentType) {
+        case ComponentType.CPU:
+            return <BsCpuFill size='auto'/>;
+        case ComponentType.COOLER:
+            return <BsFan size='auto'/>;
+        case ComponentType.GPU:
+            return <BsGpuCard size='auto'/>;
+        case ComponentType.MEMORY:
+            return <BsMemory size='auto'/>;
+        case ComponentType.MOTHERBOARD:
+            return <BsMotherboardFill size='auto'/>;
+        case ComponentType.TOWER:
+            return <PiComputerTowerFill size='auto'/>;
+        case ComponentType.PSU:
+            return <FaPlug size='auto'/>;
+        case ComponentType.STORAGE:
+            return <BsFillDeviceHddFill size='auto'/>;
+        case ComponentType.UNDEFINED:
+        default:
+            return <Bs0Circle size='auto'/>;
+    }
 }
-
-const MotherboardCategory = () => {
-    return (
-        <div id="category-content">
-            <div id="center">
-               <BsMotherboardFill size={'auto'}/>
-                <p className="text-center">Motherboard</p> 
-            </div>
-        </div>
-    );
-}
-
-
-const MemoryCategory = () => {
-    return (
-        <div id="category-content">
-            <div id="center">
-               <BsMemory size={'auto'}/>
-                <p className="text-center">Memory</p> 
-            </div>
-        </div>
-    );
-}
-
-
-const StorageCategory = () => {
-    return (
-        <div id="category-content">
-            <div id="center">
-               <BsFillDeviceHddFill size={'auto'}/>
-                <p className="text-center">Storage</p> 
-            </div>
-        </div>
-    );
-}
-
-const GPUCategory = () => {
-    return (
-        <div id="category-content">
-            <div id="center">
-               <BsGpuCard size={'auto'}/>
-                <p className="text-center">GPU</p> 
-            </div>
-        </div>
-    );
-}
-
-const TowerCategory = () => {
-    return (
-        <div id="category-content">
-            <div id="center">
-               <PiComputerTowerFill size={'auto'}/>
-                <p className="text-center">Tower</p> 
-            </div>
-        </div>
-    );
-}
-
-const PSUCategory = () => {
-    return (
-        <div id="category-content">
-            <div id="center">
-               <FaPlug size={'auto'}/>
-                <p className="text-center">PSU</p> 
-            </div>
-        </div>
-    );
-}
-
 
 export default Categories;

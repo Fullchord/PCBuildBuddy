@@ -4,12 +4,11 @@
     width: 100%;
     height: 100%;
 }
-#categories-content {
-
+.category-content {
 }
-#center {
+.category-content-title{
     padding: 5%;
-    
+    text-align: center;
 }
 .react-icons {
     vertical-align: middle;
