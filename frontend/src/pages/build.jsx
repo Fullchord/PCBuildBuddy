@@ -3,7 +3,7 @@ import "./build.css";
 import Header from "../components/header";
 import Categories from "../components/Categories";
 import SearchFilter from "../components/SearchFilter";
-import ComponentCard from "../components/Components";
+import ComponentCard from "../components/ComponentCard";
 import Footer from "../components/footer";
 
 const Build = () => {
