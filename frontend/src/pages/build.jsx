@@ -3,7 +3,7 @@ import "./build.css";
 import Header from "../components/header";
 import Categories from "../components/Categories";
 import SearchFilter from "../components/SearchFilter";
-import Components from "../components/Components";
+import ComponentCard from "../components/Components";
 import Footer from "../components/footer";
 
 const Build = () => {
@@ -20,7 +20,20 @@ const Build = () => {
                         <SearchFilter id="search-filter"/>
                     </div>
                     <div id="components-list">
-                        <Components id="components-list"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
+                        <ComponentCard id="components-items"/>
                     </div>
                 </div>
             </div>

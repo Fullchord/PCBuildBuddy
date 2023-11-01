@@ -17,5 +17,14 @@
 }
 
 #components-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#components-items {
     width: 100%;
+    flex: 1 0 33%;
 }
