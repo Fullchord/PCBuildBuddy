@@ -21,7 +21,7 @@ const Categories = () => {
         <div id="categories-content">
             {categories.map((type) => {
                 return (
-                    <Category categoryType={type}/>
+                    <Category categoryType={type} key={ComponentType.getStringRep(type)}/>
                 );
             })}       
         </div>
