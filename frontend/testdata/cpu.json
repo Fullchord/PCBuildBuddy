@@ -1,2 +1,34 @@
-[{"ID":1, "type":"CPU", "Name":"13700K", "Price":464.23, "Speed":5.4, "CoreCount":16, "ThreadCount":24, "TDP":253, "DDR_ID":1, "Socket_ID":1, "Description":""},
- {"ID":2, "type":"CPU", "Name":"7600X", "Price":249.0, "Speed":4.7, "CoreCount":6, "ThreadCount":12, "TDP":105, "DDR_ID":2, "Socket_ID":2, "Description":""}]
+[
+    {
+        "id":1, 
+        "type":"CPU", 
+        "name":"13700K", 
+        "price":464.23, 
+        "description":"",
+        "manufacturer": "intel",
+        "specs": {
+            "speed":5.4, 
+            "coreCount":16,
+            "threadCount":24, 
+            "tdp":253, 
+            "ddr_id":1, 
+            "socket_id":1
+            }
+        },
+        {
+            "id":2, 
+            "type":"CPU", 
+            "name":"7600X", 
+            "price":249.0, 
+            "description":"",
+            "manufacturer": "amd",
+            "specs": {
+                "speed":4.7, 
+                "coreCount":6, 
+                "threadCount":12, 
+                "tdp":105, 
+                "ddr_id":2, 
+                "socket_id":2
+            }
+        }
+]
