@@ -21,18 +21,22 @@ const Categories = () => {
         <div id="categories-content">
             {categories.map((type) => {
                 return (
-                    <Category categoryType={type} key={ComponentType.getStringRep(type)}/>
+                    <Category categoryType={type} isSelected={type == ComponentType.CPU} key={ComponentType.getStringRep(type)}/>
                 );
             })}       
         </div>
     );
 }
 
-const Category = ({categoryType}) => {
+const Category = ({categoryType, isSelected}) => {
     const categoryString = ComponentType.getStringRep(categoryType); 
+    const classes  = ["category-content"];
+    if(isSelected) classes.push("category-selected");
     return (
-        <div className="category-content" key={categoryString}>
-            {getIconForType(categoryType)}
+        <div className={classes.reduce( (acc,next)=>acc+=" "+next)}  key={categoryString}>
+            <div className="category-icons">
+                {getIconForType(categoryType)}
+            </div>
             <div className="category-content-title">{categoryString}</div>
         </div>
     );
@@ -41,24 +45,24 @@ const Category = ({categoryType}) => {
 function getIconForType(componentType) {
     switch(componentType) {
         case ComponentType.CPU:
-            return <BsCpuFill size='auto'/>;
+            return <BsCpuFill size='100%'/>;
         case ComponentType.COOLER:
-            return <BsFan size='auto'/>;
+            return <BsFan size='100%'/>;
         case ComponentType.GPU:
-            return <BsGpuCard size='auto'/>;
+            return <BsGpuCard size='100%'/>;
         case ComponentType.MEMORY:
-            return <BsMemory size='auto'/>;
+            return <BsMemory size='100%'/>;
         case ComponentType.MOTHERBOARD:
-            return <BsMotherboardFill size='auto'/>;
+            return <BsMotherboardFill size='100%'/>;
         case ComponentType.TOWER:
-            return <PiComputerTowerFill size='auto'/>;
+            return <PiComputerTowerFill size='100%'/>;
         case ComponentType.PSU:
-            return <FaPlug size='auto'/>;
+            return <FaPlug size='100%'/>;
         case ComponentType.STORAGE:
-            return <BsFillDeviceHddFill size='auto'/>;
+            return <BsFillDeviceHddFill size='100%'/>;
         case ComponentType.UNDEFINED:
         default:
-            return <Bs0Circle size='auto'/>;
+            return <Bs0Circle size='100%'/>;
     }
 }
 

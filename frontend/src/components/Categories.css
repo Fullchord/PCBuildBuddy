@@ -5,14 +5,22 @@
     left: 0;
     width: 15vw;
     height: 85VH;
-    background-color: #ccc;
+    background-color: lightgray;
 }
 .category-content {
-    height: 7vh;
+    height: 25%;
     padding: 5%;
+}
+.category-icons {
+    text-align: center;
+    height: 85%;
 }
 .category-content-title{
     text-align: center;
+    padding: 5%;
+}
+.category-selected{
+    background-color:#cbc6c6;
 }
 .react-icons {
     vertical-align: middle;
