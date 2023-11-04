@@ -1,85 +1,28 @@
 import "./ComponentCard.css";
 import "../../util/ComponentType.js"
-import { ComponentType } from "../../util/ComponentType.js";
 
-const ComponentCard = () => {
+const ComponentCard = ({component}) => {
     return (
         <div id="components-content">
             <img/>
-            <p>Name</p>
-            <p>$0.00</p>
-            <ComponentCardDetails componentType={ComponentType.CPU}/>
+            <p>{component.name}</p>
+            <p>{component.price}</p>
+            <ComponentCardDetails specs={component.specs}/>
         </div>
     );
 }
 
-const ComponentCardDetails = ({componentType}) => {
-
-    switch(componentType) {
-        case ComponentType.CPU:
-            return (
-                <>
-                    <p>Speed</p>
-                    <p>CoreCount</p>
-                    <p>ThreadCount</p>
-                    <p>TDP</p>
-                    <p>Description</p>
-                </>
-            );
-        case ComponentType.COOLER:
-            return (
-                <>
-                
-                </>
-            );
-        case ComponentType.MEMORY:
-            return (
-                <>
-                
-                </>
-            );
-        case ComponentType.TOWER:
-            return (
-                <>
-                
-                </>
-            );
-        case ComponentType.GPU:
-            return (
-                <>
-                
-                </>
-            );
-        case ComponentType.MOTHERBOARD:
-            return (
-                <>
-                
-                </>
-            );
-        case ComponentType.PSU:
-            return (
-                <>
-                
-                </>
-            );
-        case ComponentType.STORAGE:
-            return (
-                <>
-                
-                </>
-            );
-        case ComponentType.UNDEFINED:
-            return (
-                <>
-                
-                </>
-            );
-
+const ComponentCardDetails = ({specs}) => {
+    let details = [];
+    for (let [spec, value] of Object.entries(specs)) {
+        details.push(
+            <div key={spec}>
+                <span>{spec}</span>
+                <span>{value}</span>
+            </div>
+        );
     }
+    return <>{...details}</>
 }
-
-//CPU attributes
-//GPU attributes
-
 
 export default ComponentCard;

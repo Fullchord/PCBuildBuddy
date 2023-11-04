@@ -3,8 +3,8 @@ import "./build.css";
 import Header from "../components/header";
 import Categories from "../components/Categories";
 import SearchFilter from "../components/SearchFilter";
-import ComponentCard from "../components/ComponentCard";
 import Footer from "../components/footer";
+import ComponentCollection from "../components/ComponentCollection";
 
 const Build = () => {
 
@@ -19,21 +19,8 @@ const Build = () => {
                     <div id="search-filter">
                         <SearchFilter id="search-filter"/>
                     </div>
-                    <div id="components-list">
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
-                        <ComponentCard id="components-items"/>
+                    <div>
+                        <ComponentCollection id="components-items"/>
                     </div>
                 </div>
             </div>
