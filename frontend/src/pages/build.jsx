@@ -10,7 +10,7 @@ const Build = () => {
 
     return (
         <main>
-            <Header/>
+            <Header enableStickyHeader />
             <div id="build-wrapper">
                 <div id="categories-bar">
                     <Categories/>

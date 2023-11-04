@@ -1,14 +1,26 @@
 #categories-content {
     border: 2px solid black;
-
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 15vw;
+    height: 85VH;
+    background-color: lightgray;
 }
 .category-content {
+    height: 25%;
+    padding: 5%;
+}
+.category-icons {
+    text-align: center;
+    height: 85%;
 }
 .category-content-title{
-    padding: 5%;
     text-align: center;
+    padding: 5%;
+}
+.category-selected{
+    background-color:#cbc6c6;
 }
 .react-icons {
     vertical-align: middle;
