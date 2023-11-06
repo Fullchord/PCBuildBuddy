@@ -11,8 +11,8 @@
       "coreCount": 16,
       "threadCount": 24,
       "tdp": 253,
-      "ddr_id": 1,
-      "socket_id": 1
+      "ddr": "DDR4",
+      "socket_id": "LGA1700"
     }
   },
   {
@@ -27,8 +27,8 @@
       "coreCount": 6,
       "threadCount": 12,
       "tdp": 105,
-      "ddr_id": 2,
-      "socket_id": 2
+      "ddr": "DDR4",
+      "socket": "LGA1700"
     }
   },
   {
@@ -43,8 +43,8 @@
       "coreCount": 16,
       "threadCount": 24,
       "tdp": 253,
-      "ddr_id": 1,
-      "socket_id": 1
+      "ddr": "DDR4",
+      "socket": "LGA1700"
     }
   },
   {
@@ -59,8 +59,8 @@
       "coreCount": 6,
       "threadCount": 12,
       "tdp": 105,
-      "ddr_id": 2,
-      "socket_id": 2
+      "ddr": "DDR4",
+      "socket": "LGA1700"
     }
   },
   {
@@ -75,8 +75,8 @@
       "coreCount": 16,
       "threadCount": 24,
       "tdp": 253,
-      "ddr_id": 1,
-      "socket_id": 1
+      "ddr": "DDR4",
+      "socket": "LGA1700"
     }
   },
   {
@@ -91,8 +91,8 @@
       "coreCount": 6,
       "threadCount": 12,
       "tdp": 105,
-      "ddr_id": 2,
-      "socket_id": 2
+      "ddr": "DDR4",
+      "socket": "LGA1700"
     }
   }
 ]

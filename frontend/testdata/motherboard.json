@@ -8,10 +8,10 @@
     "specs": {
       "tdp": 60,
       "ramSlots": 4,
-      "m2Slot": 1,
-      "ddr_id": 1,
-      "memorySpeed_id": 1,
-      "formFactor_id": 1,
+      "m2Slot": true,
+      "ddr": "DDR4",
+      "memorySpeed": "5200 mhz",
+      "formFactor": "ATX",
       "description": ""
     }
   },
@@ -24,10 +24,10 @@
     "specs": {
       "tdp": 60,
       "ramSlots": 4,
-      "m2Slot": 1,
-      "ddr_id": 2,
-      "memorySpeed_id": 2,
-      "formFactor_id": 1,
+      "m2Slot": false,
+      "ddr": "DDR4",
+      "memorySpeed": "5200 mhz",
+      "formFactor": "ATX",
       "description": ""
     }
   }

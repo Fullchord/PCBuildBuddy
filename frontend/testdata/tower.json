@@ -7,7 +7,7 @@
     "manufacturer": "Corsair",
     "specs": {
       "tdp": 0,
-      "formFactor_id": 1,
+      "formFactor": "ATX",
       "description": ""
     }
   },
@@ -19,7 +19,7 @@
     "manufacturer": "nZXT",
     "specs": {
       "tdp": 0,
-      "formFactor_id": 1,
+      "formFactor": "ATX",
       "description": ""
     }
   }

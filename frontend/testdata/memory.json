@@ -8,8 +8,8 @@
     "specs": {
       "tdp": 10,
       "ramSlots": 2,
-      "ddr_id": 2,
-      "memorySpeed_id": 2,
+      "ddr": "DDR4",
+      "memorySpeed": "5200 mhz",
       "description": ""
     }
   },
@@ -22,8 +22,8 @@
     "specs": {
       "tdp": 10,
       "ramSlots": 2,
-      "ddr_id": 2,
-      "memorySpeed_id": 2,
+      "ddr": "DDR4",
+      "memorySpeed": "5200 mhz",
       "description": ""
     }
   }

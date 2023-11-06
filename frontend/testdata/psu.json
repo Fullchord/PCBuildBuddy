@@ -7,7 +7,7 @@
     "manufacturer": "EVGA",
     "specs": {
       "tdp": 850,
-      "formFactor_id": 1,
+      "formFactor": "ATX",
       "description": ""
     }
   },
@@ -19,7 +19,7 @@
     "manufacturer": "Pystar",
     "specs": {
       "tdp": 1000,
-      "formFactor_id": 1,
+      "formFactor": "ATX",
       "description": ""
     }
   }

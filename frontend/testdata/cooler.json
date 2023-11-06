@@ -8,10 +8,10 @@
     "specs": {
       "tdp": 2,
       "noiseLevel": 42,
-      "waterCooled": 0,
+      "waterCooled": false,
       "fanless": false,
       "description": "",
-      "socketId": 2
+      "socket": "LGA1700"
     }
   },
   {
@@ -23,10 +23,10 @@
     "specs": {
       "tdp": 5,
       "noiseLevel": 60,
-      "waterCooled": 1,
+      "waterCooled": true,
       "fanless": false,
       "description": "",
-      "socketId": 1
+      "socket": "LGA1700"
     }
   }
 ]
