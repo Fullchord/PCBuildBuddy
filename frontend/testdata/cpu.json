@@ -13,86 +13,86 @@
             "tdp":253, 
             "ddr_id":1, 
             "socket_id":1
-            }
-        },
-        {
-            "id":2, 
-            "type":"CPU", 
-            "name":"7600X", 
-            "price":249.0, 
-            "description":"",
-            "manufacturer": "amd",
-            "specs": {
-                "speed":4.7, 
-                "coreCount":6, 
-                "threadCount":12, 
-                "tdp":105, 
-                "ddr_id":2, 
-                "socket_id":2
-            }
-        },
-        {
-        "id":1, 
-        "type":"CPU", 
-        "name":"13700K", 
-        "price":464.23, 
-        "description":"",
-        "manufacturer": "intel",
-        "specs": {
-            "speed":5.4, 
-            "coreCount":16,
-            "threadCount":24, 
-            "tdp":253, 
-            "ddr_id":1, 
-            "socket_id":1
-            }
-        },
-        {
-            "id":2, 
-            "type":"CPU", 
-            "name":"7600X", 
-            "price":249.0, 
-            "description":"",
-            "manufacturer": "amd",
-            "specs": {
-                "speed":4.7, 
-                "coreCount":6, 
-                "threadCount":12, 
-                "tdp":105, 
-                "ddr_id":2, 
-                "socket_id":2
-            }
-        },
-        {
-        "id":1, 
-        "type":"CPU", 
-        "name":"13700K", 
-        "price":464.23, 
-        "description":"",
-        "manufacturer": "intel",
-        "specs": {
-            "speed":5.4, 
-            "coreCount":16,
-            "threadCount":24, 
-            "tdp":253, 
-            "ddr_id":1, 
-            "socket_id":1
-            }
-        },
-        {
-            "id":2, 
-            "type":"CPU", 
-            "name":"7600X", 
-            "price":249.0, 
-            "description":"",
-            "manufacturer": "amd",
-            "specs": {
-                "speed":4.7, 
-                "coreCount":6, 
-                "threadCount":12, 
-                "tdp":105, 
-                "ddr_id":2, 
-                "socket_id":2
-            }
         }
+    },
+    {
+        "id":2, 
+        "type":"CPU", 
+        "name":"7600X", 
+        "price":249.0, 
+        "description":"",
+        "manufacturer": "amd",
+        "specs": {
+            "speed":4.7, 
+            "coreCount":6, 
+            "threadCount":12, 
+            "tdp":105, 
+            "ddr_id":2, 
+            "socket_id":2
+        }
+    },
+    {
+        "id":3, 
+        "type":"CPU", 
+        "name":"13700K", 
+        "price":464.23, 
+        "description":"",
+        "manufacturer": "intel",
+        "specs": {
+            "speed":5.4, 
+            "coreCount":16,
+            "threadCount":24, 
+            "tdp":253, 
+            "ddr_id":1, 
+            "socket_id":1
+            }
+    },
+    {
+        "id":4, 
+        "type":"CPU", 
+        "name":"7600X", 
+        "price":249.0, 
+        "description":"",
+        "manufacturer": "amd",
+        "specs": {
+            "speed":4.7, 
+            "coreCount":6, 
+            "threadCount":12, 
+            "tdp":105, 
+            "ddr_id":2, 
+            "socket_id":2
+        }
+    },
+    {
+        "id":5, 
+        "type":"CPU", 
+        "name":"13700K", 
+        "price":464.23, 
+        "description":"",
+        "manufacturer": "intel",
+        "specs": {
+            "speed":5.4, 
+            "coreCount":16,
+            "threadCount":24, 
+            "tdp":253, 
+            "ddr_id":1, 
+            "socket_id":1
+        }
+    },
+    {
+        "id":6, 
+        "type":"CPU", 
+        "name":"7600X", 
+        "price":249.0, 
+        "description":"",
+        "manufacturer": "amd",
+        "specs": {
+            "speed":4.7, 
+            "coreCount":6, 
+            "threadCount":12, 
+            "tdp":105, 
+            "ddr_id":2, 
+            "socket_id":2
+        }
+    }
 ]
