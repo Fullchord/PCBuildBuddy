@@ -1,2 +1,26 @@
-[{"ID":1, "type":"PSU", "Name":"220-G5-0850-X1", "Price":134.99, "TDP":850, "Manufacturer":"EVGA", "FormFactor_ID":1, "Description":""},
- {"ID":2, "type":"PSU", "Name":"ES1000", "Price":129.99, "TDP":1000, "Manufacturer":"Pystar", "FormFactor_ID":1, "Description":""}]
+[
+  {
+    "ID": 1,
+    "type": "PSU",
+    "Name": "220-G5-0850-X1",
+    "Price": 134.99,
+    "Manufacturer": "EVGA",
+    "specs": {
+      "TDP": 850,
+      "FormFactor_ID": 1,
+      "Description": ""
+    }
+  },
+  {
+    "ID": 2,
+    "type": "PSU",
+    "Name": "ES1000",
+    "Price": 129.99,
+    "Manufacturer": "Pystar",
+    "specs": {
+      "TDP": 1000,
+      "FormFactor_ID": 1,
+      "Description": ""
+    }
+  }
+]

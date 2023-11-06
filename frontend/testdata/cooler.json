@@ -1,32 +1,32 @@
 [
-    {
-        "id":1, 
-        "type":"COOLER", 
-        "name":"Wraith", 
-        "price":8.49, 
-        "manufacturer":"AMD", 
-        "specs": {
-            "tdp":2, 
-            "noiseLevel":42, 
-            "waterCooled":0, 
-            "fanless": false, 
-            "description":"", 
-            "socketId": 2
-        }
-    },
-    {
-        "id":2, 
-        "type":"COOLER", 
-        "name":"Frezzer II 240", 
-        "price":89.81, 
-        "manufacturer":"ARCTIC", 
-        "specs": {
-            "tdp":5, 
-            "noiseLevel":60,
-            "waterCooled":1, 
-            "fanless": false, 
-            "description":"", 
-            "socketId":1
-        }
+  {
+    "id": 1,
+    "type": "COOLER",
+    "name": "Wraith",
+    "price": 8.49,
+    "manufacturer": "AMD",
+    "specs": {
+      "tdp": 2,
+      "noiseLevel": 42,
+      "waterCooled": 0,
+      "fanless": false,
+      "description": "",
+      "socketId": 2
     }
+  },
+  {
+    "id": 2,
+    "type": "COOLER",
+    "name": "Frezzer II 240",
+    "price": 89.81,
+    "manufacturer": "ARCTIC",
+    "specs": {
+      "tdp": 5,
+      "noiseLevel": 60,
+      "waterCooled": 1,
+      "fanless": false,
+      "description": "",
+      "socketId": 1
+    }
+  }
 ]

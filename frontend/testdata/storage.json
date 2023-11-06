@@ -1,2 +1,28 @@
-[{"ID":1, "type":"STORAGE", "Name":"980 Pro", "Price":79.99, "TDP":2, "Manufacturer":"Samsung", "Size":1024, "Type":"M.2. SSD", "Description":""},
- {"ID":2, "type":"STORAGE", "Name":"870 EVO", "Price":119.99, "TDP":2, "Manufacturer":"Samsung", "Size":2048, "Type":"SATA SSD", "Description":""}]
+[
+  {
+    "ID": 1,
+    "type": "STORAGE",
+    "Name": "980 Pro",
+    "Price": 79.99,
+    "Manufacturer": "Samsung",
+    "specs": {
+      "TDP": 2,
+      "Size": 1024,
+      "Type": "M.2. SSD",
+      "Description": ""
+    }
+  },
+  {
+    "ID": 2,
+    "type": "STORAGE",
+    "Name": "870 EVO",
+    "Price": 119.99,
+    "Manufacturer": "Samsung",
+    "specs": {
+      "TDP": 2,
+      "Size": 2048,
+      "Type": "SATA SSD",
+      "Description": ""
+    }
+  }
+]

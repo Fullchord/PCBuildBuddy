@@ -1,2 +1,30 @@
-[{"ID":1, "type":"MEMORY", "Name":"VENGENCE LPX", "Price":79.99, "TDP":10, "Manufacturer":"Corsair", "RamSlots":2, "DDR_ID":2, "MemorySpeed_ID":2, "Description":""},
- {"ID":2, "type":"MEMORY", "Name":"Corsair Vengence", "Price":114.99, "TDP":10, "Manufacturer":"Corsair", "RamSlots":2, "DDR_ID":2, "MemorySpeed_ID":2, "Description":""}]
+[
+  {
+    "ID": 1,
+    "type": "MEMORY",
+    "Name": "VENGENCE LPX",
+    "Price": 79.99,
+    "Manufacturer": "Corsair",
+    "specs": {
+      "TDP": 10,
+      "RamSlots": 2,
+      "DDR_ID": 2,
+      "MemorySpeed_ID": 2,
+      "Description": ""
+    }
+  },
+  {
+    "ID": 2,
+    "type": "MEMORY",
+    "Name": "Corsair Vengence",
+    "Price": 114.99,
+    "Manufacturer": "Corsair",
+    "specs": {
+      "TDP": 10,
+      "RamSlots": 2,
+      "DDR_ID": 2,
+      "MemorySpeed_ID": 2,
+      "Description": ""
+    }
+  }
+]

@@ -1,2 +1,10 @@
-[{"ID":1, "Name":"ATX"},
- {"ID":2, "Name":"Micro ATX"}]
+[
+  {
+    "ID": 1,
+    "Name": "ATX"
+  },
+  {
+    "ID": 2,
+    "Name": "Micro ATX"
+  }
+]
