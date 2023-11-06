@@ -11,11 +11,15 @@ const Bill = () => {
             <Header enableStickyHeader />
             <div id="main-content">
                 <div id="left-side">
-                    <div><AnchorButton onclick="window.print();">Print</AnchorButton></div>
-                    <div><AnchorButton to="/">New Build?</AnchorButton></div>
+                    <h1 id="title">Bill of Materials</h1>
+                    <div id="main-content">
+                        <AnchorButton onclick="window.print();return false;">Print</AnchorButton>
+                        <AnchorButton>Save</AnchorButton>
+                        <div id="temp"><AnchorButton to="/">New Build?</AnchorButton></div>
+                    </div>
                 </div>
                 <div id="right-side">
-
+                    <div id="receipt">Bill of Materials Receipt</div>
                 </div>
             </div>
             <Footer/>

@@ -1,12 +1,42 @@
 #main-content {
     display: grid;
+    gap: 5px;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
 }
 
 #left-side {
     grid-column: 1/2;
+    padding-left: 2%;
 }
 
 #right-side {
     grid-column: 2/3;
+
+    position: relative;
+}
+
+#title {
+    font-size: 2.5em;
+    width: 100%;
+    text-align: center;
+    padding: 3% 0% 3% 0%;
+}
+
+#receipt {
+    width: 86%;
+
+    margin: 5% 0% 5% 5%;
+    padding: 2% 2% 2% 2%;
+    border: 5px solid black;
+
+    /**Centers Vertically**/
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#temp {
+    grid-column: 1/3;
 }
