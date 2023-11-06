@@ -20,6 +20,7 @@ const componentSlice = createSlice({
     initialState: {
         selectedComponents: [],
         availableComponents: [],
+        currentSelected: undefined,
         currentCategory: "CPU"
     },
     reducers: {
@@ -39,6 +40,10 @@ const componentSlice = createSlice({
             state.selectedComponents.push(action.payload);
         },
 
+        setCurrentSelected: (state, action) => {
+            state.currentSelected = action.payload;
+        },
+
         incrementCategory: (state) => {
             const currIdx = categoryOrder.indexOf(ComponentType.fromStr(state.currentCategory));
             if (currIdx == -1 || currIdx == (categoryOrder.length - 1)) {
@@ -48,6 +53,7 @@ const componentSlice = createSlice({
             }
 
             state.currentCategory = ComponentType.getStringRep(categoryOrder[currIdx+1]);
+            state.currentSelected = undefined;
         },
 
         /**
@@ -101,7 +107,8 @@ export const {
     addAvailable,
     addSelected, 
     incrementCategory, 
-    resetCurrentCategory
+    resetCurrentCategory,
+    setCurrentSelected
 } = componentSlice.actions;
 
 export default componentSlice.reducer;
