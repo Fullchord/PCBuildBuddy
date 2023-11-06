@@ -1,0 +1,12 @@
+#main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#left-side {
+    grid-column: 1/2;
+}
+
+#right-side {
+    grid-column: 2/3;
+}
