@@ -1,12 +1,12 @@
 [
   {
-    "ID": 1,
-    "Name": "LGA1700",
-    "CPUManufacturer": "Intel"
+    "id": 1,
+    "name": "LGA1700",
+    "cpuManufacturer": "Intel"
   },
   {
-    "ID": 2,
-    "Name": "AM4",
-    "CPUManufacturer": "AMD"
+    "id": 2,
+    "name": "AM4",
+    "cpuManufacturer": "AMD"
   }
 ]

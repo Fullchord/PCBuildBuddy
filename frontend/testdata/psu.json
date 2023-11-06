@@ -1,26 +1,26 @@
 [
   {
-    "ID": 1,
+    "id": 1,
     "type": "PSU",
-    "Name": "220-G5-0850-X1",
-    "Price": 134.99,
-    "Manufacturer": "EVGA",
+    "name": "220-G5-0850-X1",
+    "price": 134.99,
+    "manufacturer": "EVGA",
     "specs": {
-      "TDP": 850,
-      "FormFactor_ID": 1,
-      "Description": ""
+      "tdp": 850,
+      "formFactor_id": 1,
+      "description": ""
     }
   },
   {
-    "ID": 2,
+    "id": 2,
     "type": "PSU",
-    "Name": "ES1000",
-    "Price": 129.99,
-    "Manufacturer": "Pystar",
+    "name": "ES1000",
+    "price": 129.99,
+    "manufacturer": "Pystar",
     "specs": {
-      "TDP": 1000,
-      "FormFactor_ID": 1,
-      "Description": ""
+      "tdp": 1000,
+      "formFactor_id": 1,
+      "description": ""
     }
   }
 ]

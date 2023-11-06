@@ -1,34 +1,34 @@
 [
   {
-    "ID": 1,
+    "id": 1,
     "type": "MOTHERBOARD",
-    "Name": "Z790-P",
-    "Price": 189.99,
-    "Manufacturer": "MSI",
+    "name": "Z790-p",
+    "price": 189.99,
+    "manufacturer": "MSI",
     "specs": {
-      "TDP": 60,
-      "RamSlots": 4,
-      "M.2Slot": 1,
-      "DDR_ID": 1,
-      "MemorySpeed_ID": 1,
-      "FormFactor_ID": 1,
-      "Description": ""
+      "tdp": 60,
+      "ramSlots": 4,
+      "m2Slot": 1,
+      "ddr_id": 1,
+      "memorySpeed_id": 1,
+      "formFactor_id": 1,
+      "description": ""
     }
   },
   {
-    "ID": 2,
+    "id": 2,
     "type": "MOTHERBOARD",
-    "Name": "B650M-P",
-    "Price": 119.99,
-    "Manufacturer": "MSI",
+    "name": "B650M-p",
+    "price": 119.99,
+    "manufacturer": "MSI",
     "specs": {
-      "TDP": 60,
-      "RamSlots": 4,
-      "M.2Slot": 1,
-      "DDR_ID": 2,
-      "MemorySpeed_ID": 2,
-      "FormFactor_ID": 1,
-      "Description": ""
+      "tdp": 60,
+      "ramSlots": 4,
+      "m2Slot": 1,
+      "ddr_id": 2,
+      "memorySpeed_id": 2,
+      "formFactor_id": 1,
+      "description": ""
     }
   }
 ]

@@ -1,26 +1,26 @@
 [
   {
-    "ID": 1,
+    "id": 1,
     "type": "TOWER",
-    "Name": "4000D",
-    "Price": 94.99,
-    "Manufacturer": "Corsair",
+    "name": "4000D",
+    "price": 94.99,
+    "manufacturer": "Corsair",
     "specs": {
-      "TDP": 0,
-      "FormFactor_ID": 1,
-      "Description": ""
+      "tdp": 0,
+      "formFactor_id": 1,
+      "description": ""
     }
   },
   {
-    "ID": 2,
+    "id": 2,
     "type": "TOWER",
-    "Name": "H5 Flow Compact",
-    "Price": 89.99,
-    "Manufacturer": "NZXT",
+    "name": "H5 Flow Compact",
+    "price": 89.99,
+    "manufacturer": "nZXT",
     "specs": {
-      "TDP": 0,
-      "FormFactor_ID": 1,
-      "Description": ""
+      "tdp": 0,
+      "formFactor_id": 1,
+      "description": ""
     }
   }
 ]

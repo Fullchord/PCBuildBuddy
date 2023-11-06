@@ -1,10 +1,10 @@
 [
   {
-    "ID": 1,
-    "Name": "ATX"
+    "id": 1,
+    "name": "ATX"
   },
   {
-    "ID": 2,
-    "Name": "Micro ATX"
+    "id": 2,
+    "name": "Micro ATX"
   }
 ]
