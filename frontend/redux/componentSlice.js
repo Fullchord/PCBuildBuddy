@@ -20,7 +20,7 @@ const componentSlice = createSlice({
     initialState: {
         selectedComponents: [],
         availableComponents: [],
-        currentCategory: ComponentType.CPU
+        currentCategory: "CPU"
     },
     reducers: {
         clearAvailable: (state) => {
@@ -40,14 +40,14 @@ const componentSlice = createSlice({
         },
 
         incrementCategory: (state) => {
-            const currIdx = categoryOrder.find(state.currentCategory);
+            const currIdx = categoryOrder.indexOf(ComponentType.fromStr(state.currentCategory));
             if (currIdx == -1 || currIdx == (categoryOrder.length - 1)) {
                 console.error(`Error incrementing the current category in state for category ${ComponentType.getStringRep(state.currentCategory)}`);
                 state.currentCategory = ComponentType.UNDEFINED;
                 return;
             }
 
-            state.currentCategory = categoryOrder[currIdx+1];
+            state.currentCategory = ComponentType.getStringRep(categoryOrder[currIdx+1]);
         },
 
         /**
@@ -95,7 +95,13 @@ const componentSlice = createSlice({
     }
 });
 
-
-export const { clearAvailable, clearSelected, addAvailable, addSelected } = componentSlice.actions;
+export const { 
+    clearAvailable, 
+    clearSelected, 
+    addAvailable,
+    addSelected, 
+    incrementCategory, 
+    resetCurrentCategory
+} = componentSlice.actions;
 
 export default componentSlice.reducer;

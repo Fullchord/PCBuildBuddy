@@ -36,7 +36,7 @@ export const ComponentType = Object.freeze({
     },
 
     getStringRep(c) {
-        if (c == undefined) return undefined;
+        if (c == undefined) return "";
 
         const stringTable = [
             [ComponentType.CPU, "CPU"],
@@ -47,10 +47,10 @@ export const ComponentType = Object.freeze({
             [ComponentType.MOTHERBOARD, "MOTHERBOARD"],
             [ComponentType.PSU, "PSU"],
             [ComponentType.STORAGE, "STORAGE"],
-            [ComponentType.UNDEFINED, undefined]
+            [ComponentType.UNDEFINED, "UNDEFINED"]
         ];
-
-        return stringTable.find((ste) => ste[0] == c)[1];
+        const result = stringTable.find((ste) => ste[0] == c)[1];
+        return result || "";
     }
 });
 
