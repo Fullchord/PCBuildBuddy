@@ -22,15 +22,18 @@ const ComponentCard = ({component, isSelected}) => {
                 <div className="component-content-image">
                     {getDefaultImage(ComponentType.fromStr(component.type))}
                 </div>
-                <span className="component-detail">
+                <div className="component-detail">
                     <span className="component-detail-spec">Name: </span>
                     <span className="component-detail-value">{changeCase.capitalCase(component.name)}</span>
-                </span>
-                <br/>
-                <span className="component-detail">
+                </div>
+                <div className="component-detail">
                     <span className="component-detail-spec">Price: </span>
                     <span className="component-detail-value">{component.price}</span>
-                </span>
+                </div>
+                <div className="component-detail">
+                    <span className="component-detail-spec">Manufacturer: </span>
+                    <span className="component-detail-value">{changeCase.constantCase(component.manufacturer)}</span>
+                </div>
                 <ComponentCardDetails specs={component.specs}/>
             </div>
         </div>
