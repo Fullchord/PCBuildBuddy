@@ -44,7 +44,7 @@ const ComponentCardDetails = ({specs}) => {
     let details = [];
     for (let [spec, value] of Object.entries(specs)) {
         if (value == undefined || value == null || value == "") continue;
-        if (typeof(value) != "number") 
+        if (typeof(value) != "number") value = changeCase.capitalCase(value.toString());
         details.push(
             <div className="component-detail" key={spec}>
                 <span className="component-detail-spec">{changeCase.capitalCase(spec.toString())}: </span>
