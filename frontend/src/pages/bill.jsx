@@ -9,10 +9,10 @@ const Bill = () => {
     return (
         <main>
             <Header enableStickyHeader />
-            <div id="main-content">
+            <div className="main-content-bill">
                 <div id="left-side">
                     <h1 id="title">Bill of Materials</h1>
-                    <div id="main-content">
+                    <div className="main-content-bill">
                         <AnchorButton onclick="window.print();return false;">Print</AnchorButton>
                         <AnchorButton>Save</AnchorButton>
                         <div id="temp"><AnchorButton to="/">New Build?</AnchorButton></div>
