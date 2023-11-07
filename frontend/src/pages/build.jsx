@@ -5,6 +5,7 @@ import Categories from "../components/Categories";
 import SearchFilter from "../components/SearchFilter";
 import Footer from "../components/footer";
 import ComponentCollection from "../components/ComponentCollection";
+import NextCategoryButton from "../components/NextCategoryButton";
 
 const Build = () => {
 
@@ -24,6 +25,7 @@ const Build = () => {
                     </div>
                 </div>
             </div>
+            <NextCategoryButton/>
             <Footer/>
         </main>
     );
