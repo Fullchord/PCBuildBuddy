@@ -9,7 +9,7 @@
 }
 .category-content {
     height: 25%;
-    padding: 5%;
+    padding: 1rem;
 }
 .category-icons {
     text-align: center;
@@ -17,7 +17,7 @@
 }
 .category-content-title{
     text-align: center;
-    padding: 5%;
+    padding: 1rem;
 }
 .category-selected{
     background-color:#cbc6c6;
