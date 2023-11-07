@@ -17,6 +17,8 @@
 .category-content-title{
     text-align: center;
     padding: 0.5rem;
+    text-wrap: wrap;
+    word-break: break-all;
 }
 .category-selected{
     background-color:gray;
