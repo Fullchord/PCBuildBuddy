@@ -2,6 +2,7 @@
    height: 25rem;
    width: 15rem;
    position: relative;
+   padding: 0.25rem;
 }
 
 .component-content {
