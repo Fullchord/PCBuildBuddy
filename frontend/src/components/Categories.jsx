@@ -37,15 +37,14 @@ const getCategories = (categoryType) => {
 }
 
 const Category = ({categoryType, isSelected}) => {
-    const categoryString = ComponentType.getStringRep(categoryType); 
     const classes  = ["category-content"];
     if(isSelected) classes.push("category-selected");
     return (
-        <div className={classes.reduce( (acc,next)=>acc+=" "+next)}  key={categoryString}>
+        <div className={classes.reduce( (acc,next)=>acc+=" "+next)}  key={ComponentType.getStringRep(categoryType)}>
             <div className="category-icons">
                 {getIconForType(categoryType)}
             </div>
-            <div className="category-content-title">{categoryString}</div>
+            <div className="category-content-title">{ComponentType.getStringRep(categoryType)}</div>
         </div>
     );
 }

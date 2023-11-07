@@ -1,11 +1,73 @@
-#components-content {
-   border: 2px solid black;
-
-   padding: 2% 2% 2% 2%;
-   height: 100%;
+.component-wrapper {
+   height: 25rem;
+   width: 15rem;
+   position: relative;
 }
 
-#components-items {
+.component-content {
+   border: 5px solid black;
+   padding: 0.25rem;
+
+   border-radius: 0.5rem;
+   width: 75%;
+   height: 75%;
+
+   overflow-y: scroll;
+   -ms-overflow-style: none; 
+   scrollbar-width: none; 
+
+   transition: 0.25s;
+   
+   position: absolute;
+   bottom: 50%;
+   left: 50%;
+   transform: translate(-50%, 50%);
+}
+
+.component-content::-webkit-scrollbar {
+   display: none;
+}
+
+.component-content-image {
+   margin-inline: auto;
+   width: 50%;
+   height: auto;
+}
+
+.component-content:hover {
+   background-color: lightgray;
+   width: 90%;
+   height: 90%;
+}
+
+.component-items {
    width: 100%;
    flex: 1 0 33%;
+}
+
+.component-detail {
+   margin-block: 0.5rem;
+   font-size: medium;
+   font-size: 1rem;
+   transition: 0.25s;
+}
+
+.component-selected {
+   border-color: var(--neutral-dark);
+}
+
+.component-selected .component-content {
+   transition: 0.25s;
+   width: 90%;
+   height: 90%;
+}
+
+.component-selected .component-detail {
+   font-size: 1.25rem;
+   transition: 0.25s;
+}
+
+.component-content:hover .component-detail{
+   font-size: 1.25rem;
+   transition: 0.25s;
 }
