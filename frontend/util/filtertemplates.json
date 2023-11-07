@@ -33,6 +33,7 @@
                 "name": "Manufacturer",
                 "type": "select",
                 "values": [
+                    null,
                     "Cooler Master",
                     "AMD",
                     "Noctua"
@@ -42,6 +43,7 @@
                 "name": "Noise-Level",
                 "type": "select",
                 "values": [
+                    null,
                     "Quite",
                     "Normal",
                     "Loud"
@@ -58,23 +60,37 @@
         ]
     }, 
     {
-        "type": "TOWER",
+        "type": "MOTHERBOARD",
         "filterParams": [
             {
                 "name": "Manufacturer",
                 "type": "select",
                 "values": [
-                    "Cooler Master",
-                    "Power PC",
-                    "ABS",
-                    "Noctua"
+                    null,
+                    "Gigabyte",
+                    "MSI",
+                    "ASUS",
+                    "ASRock"
                 ]
             },
             {
-                "name": "Test (Extra information)",
-                "type": "numeric-range",
-                "min": 0,
-                "max": 100
+                "name": "Form Factor",
+                "type": "select",
+                "values": [
+                    null,
+                    "ATX",
+                    "mATX",
+                    "EATX",
+                    "ITX"
+                ]
+            },
+            {
+                "name": "RAM Slots",
+                "type": "number"
+            },
+            {
+                "name": "M.2 Slots",
+                "type": "number"
             }
         ]
     },
@@ -85,6 +101,7 @@
                 "name": "Manufacturer",
                 "type": "select",
                 "values": [
+                    null,
                     "Nvidia",
                     "AMD",
                     "Intel"
@@ -107,6 +124,7 @@
                 "name": "Manufacturer",
                 "type": "select",
                 "values": [
+                    null,
                     "Corsair",
                     "G Skill",
                     "OLOy",
@@ -132,6 +150,86 @@
                     1000, 3200, 3600,
                     3800, 4200, 4600
                 ]
+            }
+        ]
+    },
+    {
+        "type": "STORAGE",
+        "filterParams": [
+            {
+                "name": "Manufacturer",
+                "type": "select",
+                "values": [
+                    null,
+                    "Seagate",
+                    "Crucial",
+                    "Team",
+                    "Samsung"
+                ]
+            },
+            {
+                "name": "Capacity (GB)",
+                "type": "numeric-range",
+                "min": 100,
+                "max": 16000
+            }, 
+            {
+                "name": "Connector",
+                "type": "checkbox",
+                "values": [
+                    "M.2",
+                    "SATA"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "TOWER",
+        "filterParams": [
+            {
+                "name": "Manufacturer",
+                "type": "select",
+                "values": [
+                    null,
+                    "Cooler Master",
+                    "Power PC",
+                    "ABS",
+                    "Noctua"
+                ]
+            },
+            {
+                "name": "Size",
+                "type": "select",
+                "values": [
+                    null,
+                    "Tiny",
+                    "Small",
+                    "Medium",
+                    "Large",
+                    "Huge"
+                ]
+            }
+        ]
+    }, 
+    {
+        "type": "PSU",
+        "filterParams": [
+            {
+                "name": "Manufacturer",
+                "type": "select",
+                "values": [
+                    null,
+                    "Corsair",
+                    "Seasonic",
+                    "EVGA",
+                    "Thermaltake"
+                ]
+            },
+            {
+                "name": "Power",
+                "type": "numeric-range",
+                "min": 100,
+                "max": 3500
             }
         ]
     }
