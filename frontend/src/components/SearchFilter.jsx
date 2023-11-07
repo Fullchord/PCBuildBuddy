@@ -6,10 +6,13 @@ import TemplatedFilter from "./TemplatedFilter";
 import ExpandArrow from "./ExpandArrow";
 import { useState } from "react";
 
+import { useSelector } from "react-redux";
+import { useGetCategoryType } from "../../hooks/ComponentStoreUtil";
+
 const SearchFilter = () => {
     const [isExpand, setIsExpand] = useState(false);
 
-    const onExpand =  (expand) => {
+    const onExpand = (expand) => {
         setIsExpand(!expand);
     }    
 
@@ -41,9 +44,11 @@ const Filter = () => {
         console.log(data);
     }
 
+    const currCategory = useGetCategoryType();
+
     return (
         <form id="filter-content" onSubmit={handleSubmit(onFilter)}>
-            <TemplatedFilter category={ComponentType.CPU} register={register}/>
+            <TemplatedFilter category={currCategory} register={register}/>
             <span>
                 <label>Price Range</label>
                 <span>

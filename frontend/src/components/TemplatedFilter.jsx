@@ -5,6 +5,10 @@ const TemplatedFilter = ({category, register}) => {
     if (category == undefined || register == undefined) return (<></>);
 
     const filterTemplate = FindFilterTemplate(category);
+    if (filterTemplate == undefined) {
+        console.error(`Could not find a filter template for the type: ${ComponentType.getStringRep(category)}`)
+        return (<></>);
+    } 
     let components = [];
 
     for (let option of filterTemplate) {
@@ -24,6 +28,8 @@ function FindFilterTemplate(componentType) {
     if (componentType == undefined || componentType == ComponentType.UNDEFINED) return;
 
     const template = filterTemplates.find((v) => ComponentType.fromStr(v.type) == componentType);
+    if(template == undefined) return undefined;
+
     return template.filterParams;
 }
 
