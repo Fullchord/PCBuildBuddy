@@ -65,7 +65,7 @@ const componentSlice = createSlice({
          * @returns 
          */
         resetCurrentCategory: (state, action) => {
-            const targetCat = action.payload | categoryOrder[0];
+            const targetCat = action.payload || categoryOrder[0];
             const targetCatIdx = categoryOrder.find(targetCat);
 
             if(targetCatIdx == -1) { // Check for invalid index
