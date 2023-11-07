@@ -2,6 +2,7 @@ import "./Categories.css";
 import { BsFillCpuFill, BsFan, BsMotherboardFill, BsMemory, BsFillDeviceHddFill, BsGpuCard, BsCpuFill, Bs0Circle } from 'react-icons/bs';
 import { PiComputerTowerFill } from 'react-icons/pi';
 import { FaPlug } from 'react-icons/fa6';
+import { GiFinishLine } from 'react-icons/gi';
 import { ComponentType } from "../../util/ComponentType";
 import { useGetCategoryType } from "../../hooks/ComponentStoreUtil"
 
@@ -16,7 +17,13 @@ const Categories = () => {
                 return (
                     <Category categoryType={type} isSelected={ type == currentCategory } key={ComponentType.getStringRep(type)}/>
                 );
-            })}       
+            })}  
+            <div className="category-content">
+                <div className="category-icon">
+                    <GiFinishLine size='100%'/>
+                </div>
+                <div className="category-content-title">Finish</div>
+            </div>
         </div>
     );
 }
@@ -41,7 +48,7 @@ const Category = ({categoryType, isSelected}) => {
     if(isSelected) classes.push("category-selected");
     return (
         <div className={classes.reduce( (acc,next)=>acc+=" "+next)}  key={ComponentType.getStringRep(categoryType)}>
-            <div className="category-icons">
+            <div className="category-icon">
                 {getIconForType(categoryType)}
             </div>
             <div className="category-content-title">{ComponentType.getStringRep(categoryType)}</div>
