@@ -15,7 +15,7 @@ const Build = () => {
                 <div id="categories-bar">
                     <Categories/>
                 </div>
-                <div id="main-content">
+                <div id="build-main-content">
                     <div id="search-filter">
                         <SearchFilter id="search-filter"/>
                     </div>
