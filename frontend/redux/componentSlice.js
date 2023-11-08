@@ -4,24 +4,13 @@ import { PcComponent } from '../util/pcComponent';
 import { Component } from 'react';
 import { ComponentType } from '../util/ComponentType';
 
-const categoryOrder = [
-    ComponentType.CPU,
-    ComponentType.COOLER,
-    ComponentType.MOTHERBOARD,
-    ComponentType.MEMORY,
-    ComponentType.STORAGE,
-    ComponentType.GPU,
-    ComponentType.TOWER,
-    ComponentType.PSU,
-];
-
 const componentSlice = createSlice({
     name: 'components',
     initialState: {
         selectedComponents: [],
         availableComponents: [],
         currentSelected: undefined,
-        currentCategory: "CPU"
+        currentCategory: ComponentType.getStringRep(ComponentType.FIRST)
     },
     reducers: {
         clearAvailable: (state) => {
@@ -45,14 +34,14 @@ const componentSlice = createSlice({
         },
 
         incrementCategory: (state) => {
-            const currIdx = categoryOrder.indexOf(ComponentType.fromStr(state.currentCategory));
-            if (currIdx == -1 || currIdx == (categoryOrder.length - 1)) {
+            const currIdx = ComponentType.ORDER.indexOf(ComponentType.fromStr(state.currentCategory));
+            if (currIdx == -1 || currIdx == (ComponentType.ORDER.length - 1)) {
                 console.error(`Error incrementing the current category in state for category ${ComponentType.getStringRep(state.currentCategory)}`);
                 state.currentCategory = ComponentType.UNDEFINED;
                 return;
             }
 
-            state.currentCategory = ComponentType.getStringRep(categoryOrder[currIdx+1]);
+            state.currentCategory = ComponentType.getStringRep(ComponentType.ORDER[currIdx+1]);
             state.currentSelected = undefined;
         },
 
@@ -65,15 +54,15 @@ const componentSlice = createSlice({
          * @returns 
          */
         resetCurrentCategory: (state, action) => {
-            const targetCat = action.payload || categoryOrder[0];
-            const targetCatIdx = categoryOrder.find(targetCat);
+            const targetCat = action.payload || ComponentType.ORDER[0];
+            const targetCatIdx = ComponentType.ORDER.indexOf(targetCat);
 
             if(targetCatIdx == -1) { // Check for invalid index
                 console.error("targetCatIdx was -1. Target category to reset to is invalid.");
                 return;
             }
 
-            state.currentCategory = targetCat;
+            state.currentCategory = ComponentType.getStringRep(targetCat);
             
             for (const [index, c] of state.selectedComponents.entries()) {
                 // If the type on the component is undefined, then we will assume it needs removed
@@ -84,10 +73,10 @@ const componentSlice = createSlice({
                     continue;
                 }
 
-                const componentOrderIndex = categoryOrder.find(c);
+                const componentOrderIndex = ComponentType.ORDER.indexOf(ComponentType.fromStr(c.type));
                 if (componentOrderIndex == -1) { // Check for invalid index
-                    console.error(`Component type was defined, but was not included in the categoryOrder. 
-                        Please ensure that the category order is correctly defined. Category Type ${ComponentType.getStringRep(c)}`)
+                    console.error(`Component type was defined, but was not included in the ComponentType.ORDER. 
+                        Please ensure that the category order is correctly defined.\nValue: ${c.type}\nCategory Type: ${ComponentType.fromStr(c.type)}`)
                     
                     state.selectedComponents.splice(index, 1);
                     continue;

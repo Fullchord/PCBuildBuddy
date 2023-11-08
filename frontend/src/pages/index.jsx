@@ -5,8 +5,10 @@ import Nav from "../components/nav.jsx";
 import ContentCard from "../components/ContentCard";
 import AnchorButton from "../components/AnchorButton";
 import Footer from "../components/footer";
+import { useResetComponentStore } from "../../hooks/ComponentStoreUtil";
 
 const Index = () => {
+    useResetComponentStore();
 
     return (
         <main>

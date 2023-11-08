@@ -70,8 +70,9 @@ export const ComponentType = Object.freeze({
             [ComponentType.STORAGE, "STORAGE"],
             [ComponentType.UNDEFINED, "UNDEFINED"]
         ];
-        const result = stringTable.find((ste) => ste[0] == c)[1];
-        return result || "";
+        const result = stringTable.find((ste) => ste[0] == c);
+        if (result == undefined) return "";
+        return result[1];
     }
 });
 

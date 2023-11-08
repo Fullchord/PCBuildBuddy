@@ -67,7 +67,8 @@ function getTestData(category) {
             return STORAGEData;
         case ComponentType.UNDEFINED:
         default:
-            return undefined;
+            console.warn(`Undefined or uncompatible category was given! Value: ${category.toString()}`);
+            return [];
     }
 }
 
