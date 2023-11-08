@@ -4,12 +4,17 @@
     grid-template-columns: 1fr 1fr;
 }
 
-#left-side-receipt {
+.left-side-receipt {
     grid-column: 1/2;
     text-align: left;
 }
 
-#right-side-receipt {
+.right-side-receipt {
     grid-column: 2/3;
     text-align: right;
+}
+
+#receipt-hr {
+    grid-column: 1/3;
+    width: 100%;
 }

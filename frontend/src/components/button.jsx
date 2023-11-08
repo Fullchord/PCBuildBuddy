@@ -1,10 +1,10 @@
 import "./button.css";
 
-const Button = ({onClick, children}) => {
+const Button = ({onClick, className, children}) => {
 
 
     return (
-        <button onClick={onClick} className="button">
+        <button onClick={onClick} className={`button ${className}`.trim()}>
             {children}
         </button>
     );

@@ -19,8 +19,8 @@ const Bill = () => {
                 <div id="left-side">
                     <h1 id="title">Bill of Materials</h1>
                     <div className="main-content-bill">
-                        <Button onClick={onPrint}>Print</Button>        
-                        <div id="temp"><AnchorButton to="/build">New Build?</AnchorButton></div>
+                        <Button className="extend-button" onClick={onPrint}>Print</Button>        
+                        <div className="extend-button"><AnchorButton to="/build">New Build?</AnchorButton></div>
                     </div>
                 </div>
                 <div id="right-side">
