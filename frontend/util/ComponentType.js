@@ -2,13 +2,34 @@
 export const ComponentType = Object.freeze({
     CPU: Symbol("CPU"),
     COOLER: Symbol("COOLER"),
+    MOTHERBOARD: Symbol("MOTHERBOARD"),
     MEMORY: Symbol("MEMORY"),
     TOWER: Symbol("TOWER"), 
     GPU: Symbol("GPU"),
-    MOTHERBOARD: Symbol("MOTHERBOARD"),
-    PSU: Symbol("PSU"),
     STORAGE: Symbol("STORAGE"),
+    PSU: Symbol("PSU"),
     UNDEFINED: Symbol("Undefined Component"),
+
+    get FIRST() {
+        return this.CPU;
+    },
+
+    get LAST() {
+        return this.PSU;
+    },
+
+    get ORDER() {
+        return [
+            this.CPU,
+            this.COOLER,
+            this.MOTHERBOARD,
+            this.MEMORY,
+            this.TOWER,
+            this.GPU,
+            this.STORAGE,
+            this.PSU,
+        ];
+    },
 
     fromStr(str) {
         if (str == undefined || typeof(str) != "string") return ComponentType.UNDEFINED;
