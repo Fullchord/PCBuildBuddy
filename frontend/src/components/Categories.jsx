@@ -29,18 +29,8 @@ const Categories = () => {
 }
 
 const getCategories = (categoryType) => {
-    const categories = [
-        ComponentType.CPU, // 0
-        ComponentType.COOLER, // 1
-        ComponentType.MOTHERBOARD, // 2
-        ComponentType.MEMORY, // 3
-        ComponentType.STORAGE, // 4
-        ComponentType.GPU, // 5
-        ComponentType.TOWER, // 6
-        ComponentType.PSU, // 7
-    ];
-    const index = categories.indexOf(categoryType);
-    return categories.slice(index, categories.length);
+    const index = ComponentType.ORDER.indexOf(categoryType);
+    return ComponentType.ORDER.slice(index, ComponentType.ORDER.length);
 }
 
 const Category = ({categoryType, isSelected}) => {
