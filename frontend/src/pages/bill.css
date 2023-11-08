@@ -36,7 +36,7 @@
 }
 
 @media print {
-    .temp, header, footer, h1 {
+    .temp, header, footer, h1, button {
         display: none;
     }
 
