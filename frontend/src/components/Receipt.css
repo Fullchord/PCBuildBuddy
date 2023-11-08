@@ -1,0 +1,15 @@
+#content-wrapper-receipt {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+#left-side-receipt {
+    grid-column: 1/2;
+    text-align: left;
+}
+
+#right-side-receipt {
+    grid-column: 2/3;
+    text-align: right;
+}
