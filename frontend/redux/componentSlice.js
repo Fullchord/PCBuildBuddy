@@ -54,6 +54,8 @@ const componentSlice = createSlice({
          * @returns 
          */
         resetCurrentCategory: (state, action) => {
+            state.currentSelected = undefined;
+
             const targetCat = action.payload || ComponentType.ORDER[0];
             const targetCatIdx = ComponentType.ORDER.indexOf(targetCat);
 

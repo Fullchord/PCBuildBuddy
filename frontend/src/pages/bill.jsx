@@ -5,11 +5,21 @@ import Footer from "../components/footer";
 import AnchorButton from "../components/AnchorButton";
 import Receipt from "../components/Receipt";
 import Button from "../components/button";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { resetCurrentCategory } from "../../redux/componentSlice";
 
 const Bill = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const onPrint = () => {
         window.print();
+    }
+
+    const onNewBuild = () => {
+        dispatch(resetCurrentCategory());
+        navigate("/build");
     }
 
     return (
@@ -20,7 +30,7 @@ const Bill = () => {
                     <h1 id="title">Bill of Materials</h1>
                     <div className="main-content-bill">
                         <Button className="extend-button" onClick={onPrint}>Print</Button>        
-                        <div className="extend-button"><AnchorButton to="/build">New Build?</AnchorButton></div>
+                        <Button className="extend-button" onClick={onNewBuild}>New Build?</Button>
                     </div>
                 </div>
                 <div id="right-side">
