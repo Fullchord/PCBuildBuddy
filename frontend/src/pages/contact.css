@@ -1,0 +1,42 @@
+#center-contact-page {
+    display: block;
+    margin: auto;
+    width: 75%;
+}
+
+#contact-title {
+    font-size: 2em;
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+}
+
+#contact-p {
+    font-size: 1.2em;
+    text-align: left;
+    tab-size: 8;
+    padding-bottom: 5%;
+}
+
+#contact-grid {
+    display: grid;
+    gap: 5px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact-customer {
+    grid-column: 1/2;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.contact-customer-business-titles {
+    text-decoration: underline;
+    padding-bottom: 1%;
+}
+
+#contact-business {
+    grid-column: 2/3;
+    text-align: center;
+    text-decoration: underline;
+}
