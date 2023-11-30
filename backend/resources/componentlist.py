@@ -36,7 +36,7 @@ class ComponentList(Resource):
         else:
             match cType.upper():
                 case "CPU":
-                    cpuList = list(DatabaseConnection().fetch("SELECT * FROM CPU"))
+                    cpuList = CpuRetriever.getCompatable(list(DatabaseConnection().fetch("SELECT * FROM CPU"))) 
                 case "COOLER":
                     coolerList = CoolerRetriever.getCompatable({"CPU": "i7-12700K"}, list(DatabaseConnection().fetch("SELECT * FROM COOLER"))) #TODO replace CPU with actualised data from web app
                 case "MOTHERBOARD":
