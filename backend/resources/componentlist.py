@@ -1,4 +1,6 @@
 from flask_restful import Resource
+from flask import request
+
 from util.ComponentType import ComponentType
 from database.db import DatabaseConnection
 from flask import abort
@@ -11,6 +13,7 @@ from retrieval.gpu import GpuRetriever
 from retrieval.storage import StorageRetriever
 from retrieval.psu import PsuRetriever
 
+from acutalizer import actualizeComponents
 
 class ComponentList(Resource):
     # def get(self, cType): 
