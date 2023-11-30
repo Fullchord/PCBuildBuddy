@@ -2,6 +2,7 @@ from flask_restful import Resource
 from util.ComponentType import ComponentType
 from database.db import DatabaseConnection
 from flask import abort
+from retrieval.cpu import CpuRetriever
 from retrieval.cooler import CoolerRetriever
 from retrieval.motherboard import MotherboardRetriever
 from retrieval.memory import MemeoryRetriever
@@ -35,9 +36,9 @@ class ComponentList(Resource):
         else:
             match cType.upper():
                 case "CPU":
-                    list(DatabaseConnection().fetch("SELECT * FROM CPU"))
+                    cpuList = list(DatabaseConnection().fetch("SELECT * FROM CPU"))
                 case "COOLER":
-                    cpuList = CoolerRetriever.getCompatable({"CPU": "i7-12700K"}, list(DatabaseConnection().fetch("SELECT * FROM COOLER"))) #TODO replace CPU with actualised data from web app
+                    coolerList = CoolerRetriever.getCompatable({"CPU": "i7-12700K"}, list(DatabaseConnection().fetch("SELECT * FROM COOLER"))) #TODO replace CPU with actualised data from web app
                 case "MOTHERBOARD":
                     motherboardList = MotherboardRetriever.getCompatable({"CPU": "i7-12700K"}, {"COOLER": "ARCTICFREEZER2000"},list(DatabaseConnection().fetch("SELECT * FROM MOTHERBOARD"))) #TODO replace CPU,COOLER with actualised data from web app 
                 case "MEMORY":
