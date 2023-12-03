@@ -8,5 +8,5 @@ class PsuRetriever(Retriever):
         super().__init__(ComponentType.PSU)
 
 
-    def getCompatable(self, components):
+    def getCompatible(self, components):
         return DatabaseConnection().fetchAll("SELECT * FROM psu")

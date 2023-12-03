@@ -8,5 +8,5 @@ class StorageRetriever(Retriever):
         super().__init__(ComponentType.STORAGE)
 
 
-    def getCompatable(self, components):
+    def getCompatible(self, components):
         return DatabaseConnection().fetchAll("SELECT * from storage")

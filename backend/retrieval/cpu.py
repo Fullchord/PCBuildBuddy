@@ -7,6 +7,6 @@ class CpuRetriever(Retriever):
         super().__init__(ComponentType.CPU)
 
 
-    def getCompatable(self, components):
+    def getCompatible(self, components):
         # Because the CPU category is the first one the user chooses, we can just return all cpus
         return DatabaseConnection().fetchAll("SELECT * FROM cpu")

@@ -12,7 +12,7 @@ class CoolerRetriever(Retriever):
         super().__init__(ComponentType.COOLER)
 
 
-    def getCompatable(self, components):
+    def getCompatible(self, components):
         cpu = typeInComponents(components, ComponentType.CPU)
         if not cpu: 
             getLogger().warn("Cooler retriever did not recieve a CPU")

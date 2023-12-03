@@ -8,5 +8,5 @@ class MemoryRetriever(Retriever):
         super().__init__(ComponentType.MEMORY)
 
 
-    def getCompatable(self, components):
+    def getCompatible(self, components):
         return DatabaseConnection().fetchAll("SELECT * FROM memory")        

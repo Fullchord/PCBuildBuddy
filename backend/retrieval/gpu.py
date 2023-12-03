@@ -8,5 +8,5 @@ class GpuRetriever(Retriever):
         super().__init__(ComponentType.GPU)
         
 
-    def getCompatable(self, components):
+    def getCompatible(self, components):
         return DatabaseConnection().fetchAll("SELECT * FROM gpu")

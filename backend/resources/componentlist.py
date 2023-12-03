@@ -23,4 +23,4 @@ class ComponentList(Resource):
 
         components = actualizeComponents(request.json)
 
-        return compRet.getCompatable(components)
+        return compRet.getCompatible(components)
