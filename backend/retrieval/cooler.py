@@ -14,10 +14,10 @@ class CoolerRetriever(Retriever):
 
     def getCompatible(self, components):
         cpu = typeInComponents(components, ComponentType.CPU)
-        if not cpu: 
-            getLogger().warn("Cooler retriever did not recieve a CPU")
+        if cpu is None: 
+            getLogger().warn("Cooler retriever did not receive a CPU")
             return []
 
-        results = DatabaseConnection().fetchAll(f"SELECT * FROM cooler WHERE socket={cpu.specs.socket}") 
+        results = DatabaseConnection().fetchAll(f"SELECT * FROM cooler WHERE socket='{cpu.specs['socket']}'") 
         return results
         
