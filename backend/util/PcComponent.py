@@ -11,6 +11,9 @@ class PcComponent:
 
 
     def fromDict(d):
+        if type(d) is not dict:
+            return None
+
         common = ['id', 'type', 'name', 'description', 'price', 'manufacturer']
         specs = dict()
         # Find all specification attributes

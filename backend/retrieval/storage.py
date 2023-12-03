@@ -1,4 +1,12 @@
-class StorageRetriever:
-    def getCompatable(cpu, cooler, motherboard, memory, tower, gpu, storageList):
-        #TODO Impliment comp checker here
-        return storageList
+from .retriever import Retriever
+from util.ComponentType import ComponentType
+from database.db import DatabaseConnection
+
+
+class StorageRetriever(Retriever):
+    def __init__(self):
+        super().__init__(ComponentType.STORAGE)
+
+
+    def getCompatable(self, components):
+        return DatabaseConnection().fetchAll("SELECT * from storage")

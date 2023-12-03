@@ -30,3 +30,11 @@ def getComponentTable(cType):
     
     # This could be changed to be a more descriptive exception
     raise RuntimeError
+
+
+def typeInComponents(components, cType):
+    for c in components:
+        if c.type == cType:
+            return c
+    
+    return None

@@ -1,4 +1,12 @@
-class PsuRetriever:
-    def getCompatable(cpu, cooler, motherboard, memory, tower, gpu, storage, psuList):
-        #TODO Impliment comp checker here
-        return psuList
+from .retriever import Retriever
+from util.ComponentType import ComponentType
+from database.db import DatabaseConnection
+
+
+class PsuRetriever(Retriever):
+    def __init__(self):
+        super().__init__(ComponentType.PSU)
+
+
+    def getCompatable(self, components):
+        return DatabaseConnection().fetchAll("SELECT * FROM psu")

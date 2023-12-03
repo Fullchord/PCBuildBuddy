@@ -1,4 +1,12 @@
-class MemeoryRetriever:
-    def getCompatable(cpu, cooler, motherboard, memoryList):
-        #TODO Impliment comp checker here
-        return memoryList
+from .retriever import Retriever
+from util.ComponentType import ComponentType
+from database.db import DatabaseConnection
+
+
+class MemoryRetriever(Retriever):
+    def __init__(self):
+        super().__init__(ComponentType.MEMORY)
+
+
+    def getCompatable(self, components):
+        return DatabaseConnection().fetchAll("SELECT * FROM memory")        

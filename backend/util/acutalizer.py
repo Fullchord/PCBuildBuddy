@@ -4,11 +4,14 @@ from util.ComponentType import ComponentType
 from util.PcComponent import PcComponent
 from util.util import getComponentTable
 
-def actualizeComponents(componentList: dict):
+def actualizeComponents(componentList: dict | None):
     """
     This function takes in a dictionary of id's and types, 
     and will convert all id's into fully dressed objects
     """
+    if componentList is None:
+        return []
+
     dressedComponents = []
     
     for component in componentList:
