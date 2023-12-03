@@ -11,7 +11,7 @@ class PcComponent:
         self.specs = specs
 
 
-    def fromDict(d):
+    def fromDict(d, cType: ComponentType | None = None):
         if type(d) is not dict:
             return None
 
@@ -24,7 +24,7 @@ class PcComponent:
             specs[key] = d[key]
 
         return PcComponent(
-            d['id'], ComponentType.fromStr(d['type']),
+            d['id'], ComponentType.fromStr(d['type']) if cType == None else cType,
             d['name'], d['description'],
             d['price'], d['manufacturer'],
             specs
@@ -40,3 +40,9 @@ class PcComponent:
             "manufacturer": self.manufacturer,
             "specs": self.specs
         }
+    
+    def fromDictList(l, cType: ComponentType | None = None):
+        components = []
+        for d in l:
+            components.append(PcComponent.fromDict(d, cType=cType))
+        return components

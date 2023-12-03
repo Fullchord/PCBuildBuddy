@@ -44,4 +44,7 @@ class ComponentType(Enum):
         return ComponentType.UNDEFINED
     
     def __eq__(self, other):
+        if other is None:
+            return False
+
         return self.value == other.value

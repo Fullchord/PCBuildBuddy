@@ -23,4 +23,9 @@ class ComponentList(Resource):
 
         components = actualizeComponents(request.json)
 
-        return compRet.getCompatible(components)
+        compatible = compRet.getCompatible(components)
+        results = []
+        for c in compatible:
+            results.append(PcComponent.toDict(c))
+        
+        return results

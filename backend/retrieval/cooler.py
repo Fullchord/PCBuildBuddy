@@ -19,5 +19,5 @@ class CoolerRetriever(Retriever):
             return []
 
         results = DatabaseConnection().fetchAll(f"SELECT * FROM cooler WHERE socket='{cpu.specs['socket']}'") 
-        return results
+        return PcComponent.fromDictList(results, cType=ComponentType.COOLER)
         
