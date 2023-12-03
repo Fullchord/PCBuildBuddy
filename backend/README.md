@@ -18,3 +18,8 @@ python manage.py runserver
 ```
 mysql -u root -p
 ```
+
+## to launch server
+```
+python3 -m flask --app main run --debug
+```

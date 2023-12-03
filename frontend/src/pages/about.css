@@ -1,0 +1,30 @@
+#about-grid {
+    display: grid;
+    gap: 5px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#about-left-grid {
+    grid-column: 1/3;
+    padding-left: 5%;
+}
+
+#about-right-grid {
+    grid-column: 3/4;
+    width: 100%;
+    align-self: center;
+    padding-left: 5%;
+}
+
+#about-title {
+    font-size: 2em;
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+}
+
+#about-p {
+    font-size: 1.2em;
+    text-align: left;
+    tab-size: 8;
+}

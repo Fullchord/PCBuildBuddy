@@ -1,17 +1,26 @@
 from flask_restful import Resource
+from flask import request
 
-from database.db import DatabaseConnection
+from util.ComponentType import ComponentType
+from util.PcComponent import PcComponent
+from util.acutalizer import actualizeComponents
+from flask import abort
+from retrieval import getRetriever
+
+from logging import getLogger
 
 class ComponentList(Resource):
-    def get(self, cType): 
-        return list(DatabaseConnection().fetch("SELECT * FROM test0 LIMIT 10"))
-
-
     def post(self, cType): 
+        cType = ComponentType.fromStr(cType)
+
+        if cType == ComponentType.UNDEFINED:
+            abort(406)
         
-        pass 
+        compRet = getRetriever(cType)
+        if compRet is None:
+            getLogger().warn(f"Unable to get component retriever for {str(cType)}")
+            abort(500)
 
+        components = actualizeComponents(request.json)
 
-    def delete(self, cType): 
-
-        pass  
+        return compRet.getCompatable(components)

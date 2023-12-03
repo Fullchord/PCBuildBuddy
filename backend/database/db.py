@@ -28,18 +28,16 @@ class DatabaseConnection(DatabaseConnectionMetaClass):
                                         )
     
     def fetch(self, query, *args):
-        with self.connection:
-            with self.connection.cursor() as cursor:
-                rows = cursor.execute(query, args=args)
+        with self.connection.cursor() as cursor:
+            rows = cursor.execute(query, args=args)
+            result = cursor.fetchone()
+
+            while result is not None:
+                yield result
                 result = cursor.fetchone()
 
-                while result is not None:
-                    yield result
-                    result = cursor.fetchone()
+            self.connection.commit()
 
-                self.connection.commit()
-    
     def fetchAll(self, query, *args):
         return list(self.fetch(query, *args))
-
 
