@@ -1,3 +1,4 @@
+from util.ComponentType import ComponentType
 
 class PcComponent:
     def __init__(self, id, type, name, description, price, manufacturer, specs: dict):
@@ -23,7 +24,7 @@ class PcComponent:
             specs[key] = d[key]
 
         return PcComponent(
-            d['id'], d['type'],
+            d['id'], ComponentType.fromStr(d['type']),
             d['name'], d['description'],
             d['price'], d['manufacturer'],
             specs
@@ -32,7 +33,7 @@ class PcComponent:
     def toDict(self):
         return {
             "id": self.id,
-            "type": self.type,
+            "type": str(self.type),
             "name": self.name,
             "description": self.description,
             "price": self.price,
