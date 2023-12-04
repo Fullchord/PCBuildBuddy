@@ -1,5 +1,6 @@
 from .retriever import Retriever
 from util.ComponentType import ComponentType
+from util.PcComponent import PcComponent
 from database.db import DatabaseConnection
 
 
@@ -9,4 +10,5 @@ class StorageRetriever(Retriever):
 
 
     def getCompatible(self, components):
-        return DatabaseConnection().fetchAll("SELECT * from storage")
+        results = DatabaseConnection().fetchAll("SELECT * from storage")
+        return PcComponent.fromDictList(results, cType=ComponentType.STORAGE)
