@@ -1,36 +1,50 @@
 import "./ComponentCollection.css";
 import { ComponentType } from "../../util/ComponentType.js";
 
-import CPUData from "../../testdata/cpu.json";
-import DDRData from "../../testdata/DDR.json";
-import COOLERData from "../../testdata/cooler.json";
-import FormFactor from "../../testdata/formfactor.json";
-import GPUData from "../../testdata/gpu.json";
-import MEMORYData from "../../testdata/memory.json";
-import MOTHERBOARDData from "../../testdata/motherboard.json";
-import PSUData from "../../testdata/psu.json";
-import SOCKETData from "../../testdata/socket.json";
-import STORAGEData from "../../testdata/storage.json";
-import TOWERData from "../../testdata/tower.json";
-import ComponentCard from "./ComponentCard";
-import { useSelector } from "react-redux";
+import ComponentCard from "./ComponentCard.jsx";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useGetCategoryType } from "../../hooks/ComponentStoreUtil.js";
+
+import { incrementCategory, addAvailable, clearAvailable } from "../../redux/componentSlice.js";
 
 const ComponentCollection = () => {
     const currentCategory = useGetCategoryType();
     const currentComponent = useSelector((state) => state.components.currentSelected);
+    const currentComponentsList = useSelector(state => state.components.selectedComponents);
+    const availableComponents = useSelector(state => state.components.availableComponents);
 
-    const [data, setData] = useState(CPUData);
+    const dispatch = useDispatch();
 
-    useEffect(() => setData(getTestData(currentCategory)), 
-        [currentCategory]
-    );
+    const loadNextCategory = async () => {
+        dispatch(clearAvailable());
+        const url = `http://localhost:5000/api/retrieve-verified/${ComponentType.getStringRep(currentCategory)}`;
+        const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                mode: "cors",
+                body: JSON.stringify(currentComponentsList) 
+            }
+        );
 
+        if (!response.ok) {
+            console.error(`Could not retrieve components from API (${response.status})`)
+            return;
+        }
+
+        const componentsJson = await response.json();
+        for (const c of componentsJson) {
+            dispatch(addAvailable(c));
+        }
+    };
+
+    useEffect(() => {loadNextCategory();}, [currentCategory]);
 
     return (
         <div id="components-list">
-            {data.map(component => {
+            {availableComponents.map(component => {
                     let isSelected = false;
                     if (currentComponent != undefined)  {
                         isSelected = currentComponent.id == component.id;
@@ -45,31 +59,6 @@ const ComponentCollection = () => {
             }
         </div>
     );
-}
-
-function getTestData(category) {
-    switch(category) {
-        case ComponentType.CPU:
-            return CPUData;
-        case ComponentType.COOLER:
-            return COOLERData;
-        case ComponentType.GPU:
-            return GPUData;
-        case ComponentType.MEMORY:
-            return MEMORYData;
-        case ComponentType.MOTHERBOARD:
-            return MOTHERBOARDData;
-        case ComponentType.TOWER:
-            return TOWERData;
-        case ComponentType.PSU:
-            return PSUData;
-        case ComponentType.STORAGE:
-            return STORAGEData;
-        case ComponentType.UNDEFINED:
-        default:
-            console.warn(`Undefined or uncompatible category was given! Value: ${category.toString()}`);
-            return [];
-    }
 }
 
 export default ComponentCollection;
