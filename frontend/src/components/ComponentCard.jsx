@@ -8,6 +8,10 @@ import { useDispatch } from "react-redux";
 import { setCurrentSelected } from "../../redux/componentSlice";
 
 import * as changeCase from "change-case";
+import { useEffect, useState } from "react";
+
+
+
 
 const ComponentCard = ({component, isSelected}) => {
     const dispatch = useDispatch();
@@ -16,11 +20,38 @@ const ComponentCard = ({component, isSelected}) => {
         dispatch(setCurrentSelected(component));
     }
 
+    const [icon, setIcon] = useState(() => getDefaultImage(ComponentType.fromStr(component.type)));
+    
+    async function getImage(name) {
+        const response = await fetch(`http://localhost:5000/api/image/${name}`,
+        {
+            method: "GET",
+            mode: "cors",
+            headers: {
+                "Content-Type": "image"
+            }
+        });
+    
+        if (!response.ok) {
+            return;
+        }
+
+        const imageBlob = await response.blob();
+        const iURL = URL.createObjectURL(imageBlob);
+    
+        setIcon(<img src={iURL}/>);
+        return false;
+    }
+
+    useEffect(() => {
+        getImage(component.name);
+    }, [component.name, isSelected]);
+
     return (
         <div className={`component-wrapper ${isSelected ? "component-selected" : ""}`.trim()}>
             <div className="component-content" onClick={onClick}>
                 <div className="component-content-image">
-                    {getDefaultImage(ComponentType.fromStr(component.type))}
+                    {icon}
                 </div>
                 <div className="component-detail">
                     <span className="component-detail-spec">Name: </span>
@@ -54,6 +85,8 @@ const ComponentCardDetails = ({specs}) => {
     }
     return <>{...details}</>
 }
+
+
 
 function getDefaultImage(type) {
     const size = "100%";

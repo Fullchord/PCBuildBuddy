@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "CPU",
-    "name": "13700K",
+    "name": "i9-14900k",
     "price": 464.23,
     "description": "",
     "manufacturer": "intel",
@@ -34,7 +34,7 @@
   {
     "id": 3,
     "type": "CPU",
-    "name": "13700K",
+    "name": "i9-14900k  ",
     "price": 464.23,
     "description": "",
     "manufacturer": "intel",
