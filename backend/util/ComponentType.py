@@ -42,3 +42,9 @@ class ComponentType(Enum):
             if t.name == componentType:
                 return t
         return ComponentType.UNDEFINED
+    
+    def __eq__(self, other):
+        if other is None:
+            return False
+
+        return self.value == other.value

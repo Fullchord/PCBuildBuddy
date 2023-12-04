@@ -15,7 +15,6 @@ class DatabaseConnectionMetaClass:
 
 class DatabaseConnection(DatabaseConnectionMetaClass):
     def __init__(self):
-
         self.connection = pymysql.connect(host=getEnv('MYSQL_HOST'),
                                         user=getEnv('MYSQL_USER'),
                                         password=getEnv('MYSQL_PASSWORD'),

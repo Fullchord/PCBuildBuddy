@@ -1,5 +1,7 @@
 from os import environ
 from util.ComponentType import ComponentType
+from util.PcComponent import PcComponent
+from logging import getLogger
 
 def getEnv(key):
     if key in environ:
@@ -30,3 +32,15 @@ def getComponentTable(cType):
     
     # This could be changed to be a more descriptive exception
     raise RuntimeError
+
+
+def typeInComponents(components, cType):
+    for c in components:
+        if type(c) is not PcComponent:
+            getLogger().warn("typeInComponents called with non-PcComponent type list") 
+            continue
+        
+        if c.type == cType:
+            return c
+    
+    return None
