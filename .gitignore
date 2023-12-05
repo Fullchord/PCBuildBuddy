@@ -1,5 +1,5 @@
 *.env
-
+/backend/.env
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -163,5 +163,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-backend/secrets/
-*backend/.env
+/backend/secrets/
+/backend/.env
