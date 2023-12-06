@@ -1,36 +1,34 @@
 import "./ComponentCollection.css";
 import { ComponentType } from "../../util/ComponentType.js";
-
-import CPUData from "../../testdata/cpu.json";
-import DDRData from "../../testdata/DDR.json";
-import COOLERData from "../../testdata/cooler.json";
-import FormFactor from "../../testdata/formfactor.json";
-import GPUData from "../../testdata/gpu.json";
-import MEMORYData from "../../testdata/memory.json";
-import MOTHERBOARDData from "../../testdata/motherboard.json";
-import PSUData from "../../testdata/psu.json";
-import SOCKETData from "../../testdata/socket.json";
-import STORAGEData from "../../testdata/storage.json";
-import TOWERData from "../../testdata/tower.json";
+import { useDispatch } from "react-redux";
 import ComponentCard from "./ComponentCard";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useGetCategoryType } from "../../hooks/ComponentStoreUtil.js";
+import { getVerifiedComponents } from "../../api/apiHandler.js";
+import { addAvailable, clearAvailable } from "../../redux/componentSlice.js";
 
 const ComponentCollection = () => {
+    const dispatch = useDispatch();
     const currentCategory = useGetCategoryType();
     const currentComponent = useSelector((state) => state.components.currentSelected);
+    const selectedComponents = useSelector(state => state.components.selectedComponents);
+    const availableComponents = useSelector(state => state.components.availableComponents);
 
-    const [data, setData] = useState(CPUData);
-
-    useEffect(() => setData(getTestData(currentCategory)), 
-        [currentCategory]
-    );
+    useEffect(() => {
+        (async() => {
+            dispatch(clearAvailable());
+            const newComponents = await getVerifiedComponents(selectedComponents, currentCategory);
+            for (const nC of newComponents) {
+                dispatch(addAvailable(nC));
+            }
+        })();
+        }, [currentCategory]);
 
 
     return (
         <div id="components-list">
-            {data.map(component => {
+            {availableComponents.map(component => {
                     let isSelected = false;
                     if (currentComponent != undefined)  {
                         isSelected = currentComponent.id == component.id;
@@ -45,31 +43,6 @@ const ComponentCollection = () => {
             }
         </div>
     );
-}
-
-function getTestData(category) {
-    switch(category) {
-        case ComponentType.CPU:
-            return CPUData;
-        case ComponentType.COOLER:
-            return COOLERData;
-        case ComponentType.GPU:
-            return GPUData;
-        case ComponentType.MEMORY:
-            return MEMORYData;
-        case ComponentType.MOTHERBOARD:
-            return MOTHERBOARDData;
-        case ComponentType.TOWER:
-            return TOWERData;
-        case ComponentType.PSU:
-            return PSUData;
-        case ComponentType.STORAGE:
-            return STORAGEData;
-        case ComponentType.UNDEFINED:
-        default:
-            console.warn(`Undefined or uncompatible category was given! Value: ${category.toString()}`);
-            return [];
-    }
 }
 
 export default ComponentCollection;
