@@ -5,9 +5,11 @@ import { ComponentType } from "../../util/ComponentType";
 import TemplatedFilter from "./TemplatedFilter";
 import ExpandArrow from "./ExpandArrow";
 import { useState } from "react";
-
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useGetCategoryType } from "../../hooks/ComponentStoreUtil";
+import { getVerifiedComponents, getVerifiedComponentsSearch } from "../../api/apiHandler";
+import { clearAvailable, addAvailable } from "../../redux/componentSlice";
 
 const SearchFilter = () => {
     const [isExpand, setIsExpand] = useState(false);
@@ -30,8 +32,33 @@ const SearchFilter = () => {
 }
 
 const Search = () => {
+    const currentComponents = useSelector(state => state.components.selectedComponents);
+    const currentCategory = useGetCategoryType();
+    const dispatch = useDispatch();
+
+    const onSearch = (e) => {
+        e.preventDefault();
+
+        (async () => {
+            const searchQuery = e.target['search-input'].value;
+
+            let components = undefined;
+            if (searchQuery == "") {
+                components = await getVerifiedComponents(currentComponents, currentCategory);
+            }
+            else {
+                components = await getVerifiedComponentsSearch(currentComponents, currentCategory, searchQuery);
+            }
+            dispatch(clearAvailable());
+            for (const c of components) {
+                dispatch(addAvailable(c));
+            }
+
+        })();
+    }
+
     return (
-        <form id="search-content">
+        <form id="search-content" onSubmit={onSearch}>
             <input type="text" id="search-input" name="search-input"/>
             <button type="submit" id="search-button">Search</button>
         </form>

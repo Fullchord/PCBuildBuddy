@@ -16,9 +16,10 @@ const ComponentCollection = () => {
     const availableComponents = useSelector(state => state.components.availableComponents);
 
     useEffect(() => {
+        dispatch(clearAvailable());
         (async() => {
-            dispatch(clearAvailable());
             const newComponents = await getVerifiedComponents(selectedComponents, currentCategory);
+            dispatch(clearAvailable());
             for (const nC of newComponents) {
                 dispatch(addAvailable(nC));
             }
